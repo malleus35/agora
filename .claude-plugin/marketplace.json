@@ -15,7 +15,11 @@
       "author": {
         "name": "malleus35"
       },
-      "source": ".",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/malleus35/agora.git",
+        "sha": "4d0a7b4006ed0b2ff4dacfdb35091c5d392ced0a"
+      },
       "keywords": ["agents", "debate", "dialectics", "multi-agent", "planning", "philosophy"]
     }
   ]
