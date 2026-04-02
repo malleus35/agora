@@ -1,0 +1,22 @@
+{
+  "name": "malleus35-agora",
+  "owner": {
+    "name": "malleus35"
+  },
+  "metadata": {
+    "description": "Multi-agent debate harness — 7 philosopher agents plan through Hegelian dialectics",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agora",
+      "description": "Multi-agent debate harness — 7 philosopher agents plan through Hegelian dialectics",
+      "version": "1.0.0",
+      "author": {
+        "name": "malleus35"
+      },
+      "source": ".",
+      "keywords": ["agents", "debate", "dialectics", "multi-agent", "planning", "philosophy"]
+    }
+  ]
+}
