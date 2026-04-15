@@ -136,6 +136,7 @@ The repo now moves toward:
 - `docs/install-claude-code.md` — Claude Code install guide
 - `docs/install-opencode.md` — OpenCode install guide
 - `docs/examples/` — example artifacts and command usage
+- `mcp/recommended-servers.md` — optional MCP guidance for grounding and governance
 
 ## License
 
