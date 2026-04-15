@@ -1,147 +1,85 @@
 ---
 name: agora-debate
 description: |
-  Hegelian dialectical debate protocol for multi-agent planning.
-  Activate when philosopher agents (@socrates, @hegel, @wittgenstein,
-  @spinoza, @kant, @nietzsche, @descartes) are summoned for planning,
-  ideation, or decision-making tasks.
+  Dialectic overlay for ideation, strategic reframing, and synthesis when strong
+  opposing positions need to be worked through explicitly. This is one Agora
+  workflow, not the universal default for every problem.
+version: 0.2.0
 ---
 
-# Agora Debate Protocol
+# Agora Dialectic Overlay
 
-All work is planned and executed through dialectical debate among philosopher agents.
+## Purpose
 
-## Agent Dispatch
+Use dialectical debate when contradiction is productive.
+This overlay is best for ideation, reframing, and strategic synthesis.
+It is not the default path for every request.
 
-**When the goal is unclear** -> Summon `@socrates` first. Socrates clarifies context through questions, then delegates.
+## Best for
 
-**When implementation is obvious** -> Call the relevant agent directly.
+Use this overlay when:
+- the problem is open-ended and multiple strong frames exist
+- two or more credible positions need structured confrontation
+- the team needs a higher-order synthesis rather than a quick choice
+- novelty and reframing are valuable
 
-```
-Planning:      @hegel
-Interface:     @wittgenstein
-Backend:       @spinoza
-Design review: @kant
-Marketing:     @nietzsche
-QA:            @descartes
-```
+## Do not use when
 
----
+Prefer other workflows when:
+- the request is mainly vague -> use clarify-goals first
+- the request is a straightforward fork -> use frame-the-decision + compare-options
+- the request is verification or risk review -> use skeptic overlay + doubt-list
+- the request is governance or approval -> use court overlay + court-review
+- the task is simple execution and no philosophical tension is needed
 
-## Two Debate Modes
+## Agent dispatch
 
-### Ideation Mode (generating new ideas)
+Suggested routing:
+- unclear problem -> Socrates for clarification first
+- dialectical synthesis -> Hegel
+- semantic/interface tension -> Wittgenstein
+- system/invariant tension -> Spinoza
+- normative or aesthetic review -> Kant
+- genealogy or category rupture -> Nietzsche
+- verification gate -> Descartes
 
-Used when the problem space is open-ended or when exploring possibilities.
+## Overlay protocol
 
-1. Socrates opens with generative questions: inversions, analogies, constraint removal
-2. ALL agents contribute ideas regardless of role boundaries (Wild Card rule)
-3. No evaluation in Round 1 — quantity over quality
-4. Round 2+: Hegel clusters ideas into thesis/antithesis pairs
-5. Descartes stress-tests only AFTER ideas have been explored, never during
+### Phase 1 — Clarify the actual tension
+Before debate, state the question as a real contradiction.
+A fake contradiction produces theatrical output.
 
-**Wild Card Rule**: In ideation, any agent may speak outside their domain. Spinoza may propose a UI concept. Nietzsche may challenge an axiom. Cross-domain ideas often produce the most novel solutions. The only rule: preface with "Wild Card:" so others know it's outside your expertise.
+### Phase 2 — Diverge
+- surface thesis and antithesis clearly
+- block premature agreement
+- require steel-manning before critique
 
-### Decision Mode (choosing between options)
+### Phase 3 — Challenge
+- test hidden assumptions in each side
+- ask what would have to be true for the opposite side to win
+- preserve the strongest concern from each position
 
-Used when concrete alternatives exist and a choice must be made.
+### Phase 4 — Synthesize or stop
+- produce synthesis only if it preserves strengths from both sides
+- if no true synthesis exists, hand off to compare-options or escalate to the user
 
-1. Hegel sets the agenda as a single decision question (fork, not gradient)
-2. Each relevant agent submits an independent position (Thesis or Antithesis)
-3. Agents MUST NOT agree prematurely — explore tensions first
+## Output artifact
 
----
+A dialectic run should end in one of these:
+- synthesis memo
+- decision memo
+- minority report
+- explicit deadlock report
 
-## Debate Protocol (both modes)
+## Anti-patterns
 
-### Phase 1 — Diverge (expand the solution space)
+- using dialectic for every problem by habit
+- treating disagreement as theater instead of a path to better judgment
+- forcing novelty when a conventional solution is sufficient
+- skipping Descartes when outputs require verification
 
-- Each agent submits positions independently
-- Socrates blocks premature agreement: "What has been left unconsidered?"
+## Routing reminder
 
-### Phase 2 — Challenge (stress-test each position)
-
-- **Steel-man obligation**: Before rejecting a position, restate it in its strongest form
-- Socrates probes: "What would have to be true for the opposite to be correct?"
-- At least one agent must argue against the emerging consensus
-
-### Phase 3 — Synthesize (find higher-order solutions)
-
-- Socrates checks for genuine Synthesis (Aufhebung) — preserving strengths of both sides
-- No real synthesis -> next round with a refined question
-- Synthesis reached -> Hegel writes the plan
-
-### Round Output
-
-Each debate round must produce a written artifact:
-
-```
-## Round [N]: [Decision Question]
-
-**Thesis**: [Agent] — [Position summary in 1-2 sentences]
-**Antithesis**: [Agent] — [Counter-position summary]
-**Key tension**: [What specifically separates these views]
-**Steel-man check**: [Did each side restate the other's strongest form? Y/N]
-**Status**: [Diverging | Challenging | Synthesizing | Synthesis reached]
-```
-
-### Synthesis Quality Criteria
-
-Socrates accepts a synthesis ONLY when it meets ALL of these:
-- **Preserves**: names a specific strength from EACH side that survives
-- **Transcends**: solves a problem neither side alone could solve
-- **Actionable**: Hegel can turn it into decision-complete tasks
-- A "compromise" that weakens both sides is NOT synthesis — it's a bad average
-
-### Mode Transition: Ideation -> Decision
-
-Switch from Ideation to Decision mode when:
-- At least 3 distinct ideas have been explored
-- Socrates can frame the choice as a concrete fork
-- The team has surfaced at least one non-obvious option (not just the first two that came to mind)
-
-### Quality Gates
-
-- **No premature consensus**: All agents agree in Round 1 -> Socrates MUST escalate
-- **Steel-man before critique**: Mandatory in both modes
-- **Tension is signal**: Disagreement between agents is valuable, not a problem
-- **Cross-pollination**: Reference other agents' philosophical frameworks in arguments
-
----
-
-## Debate Calibration
-
-**Depth** — not all decisions need full debate:
-- **Trivial** (naming, minor style): 1 round, 2 agents max
-- **Moderate** (API shape, component design): 2-3 rounds, 3-4 agents
-- **Critical** (architecture, paradigm shift): 3+ rounds, all relevant agents
-
-**Participation** — Socrates decides who joins each debate. Only summon agents whose domain is directly affected. Uninvolved agents waste rounds.
-
-**Deadlock** (3+ rounds, no synthesis): Socrates stops the debate and escalates to the user with a structured summary: the two positions, the irreducible tension, and why neither side can concede. The user breaks the tie.
-
----
-
-## Inter-Agent Tension Map
-
-These natural tensions produce better outcomes when surfaced explicitly:
-
-```
-Spinoza <-> Wittgenstein    System purity vs. interface usability
-Spinoza <-> Nietzsche       Engineering rigor vs. marketing narrative
-Kant    <-> Nietzsche       Universal principles vs. bold declarations
-Hegel   <-> Descartes       Forward momentum vs. methodical doubt
-Wittgenstein <-> Kant       Structure (what/where) vs. aesthetics (how it looks)
-Socrates <-> Hegel          Questioning assumptions vs. driving toward plans
-Descartes <-> Nietzsche     Verifiable truth vs. compelling narrative
-Hegel   <-> Spinoza         Plan sequencing vs. architectural dependencies
-```
-
-When these pairs disagree, do NOT resolve quickly. Let the tension produce insight.
-
----
-
-## Completion Criteria
-
-No work is marked complete without `@descartes` review.
-Descartes must declare it "clara et distincta" (clear and distinct) for completion.
+Agora v2 is skill-first.
+Dialectic is one overlay among several.
+Choose it intentionally.
