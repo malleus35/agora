@@ -5,7 +5,7 @@
 Agora is a skill-first overlay for supervised AI work.
 It adds clarification, doubt, dissent, synthesis, and governance workflows to the host agent you already use.
 
-You keep Claude Code, Hermes, OpenCode, Codex, or another host.
+You keep Claude Code, Hermes, OpenCode, Codex, OpenClaw, or another host.
 Agora adds reusable reasoning commands, durable judgment artifacts, and philosophical overlays when a problem needs more than raw generation.
 
 ## What changed in v2
@@ -112,6 +112,14 @@ Common artifacts:
 /decide "Choose between two product directions"
 ```
 
+### Hermes
+
+```bash
+hermes skills tap add malleus35/agora
+hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
+hermes -s clarify-goals
+```
+
 ### OpenCode
 
 Load the repo's `commands/`, `skills/`, and `agents/` into your host, then start with:
@@ -119,6 +127,14 @@ Load the repo's `commands/`, `skills/`, and `agents/` into your host, then start
 ```bash
 /clarify "Clarify this vague workflow problem"
 /doubt "Review this plan before execution"
+```
+
+### OpenClaw
+
+```bash
+npm install -g openclaw@latest
+openclaw onboard --install-daemon
+# ClawHub listing path is being prepared; see docs/install-openclaw.md
 ```
 
 ### Codex or other hosts
@@ -161,12 +177,19 @@ The repo now moves toward:
 - low-friction commands
 - revised agent prompts oriented around artifacts and supervision
 
+## Registry status
+
+- Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
+- ClawHub / OpenClaw: automated publish from Hermes currently reports manual submission only via `https://clawhub.ai/submit`.
+
 ## Documentation
 
 - `docs/philosophy.md` — philosophy-to-workflow map
 - `docs/recipes.md` — scenario-based usage recipes
 - `docs/install-claude-code.md` — Claude Code install guide
+- `docs/install-hermes.md` — Hermes install guide
 - `docs/install-opencode.md` — OpenCode install guide
+- `docs/install-openclaw.md` — OpenClaw install guide
 - `docs/examples/` — example artifacts and command usage
 - `mcp/recommended-servers.md` — optional MCP guidance for grounding and governance
 
