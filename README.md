@@ -49,6 +49,8 @@ Agora exposes small entrypoints so users can get value from one command without 
 - `/clarify "prompt"` — extract purpose, constraints, success criteria, unknowns
 - `/decide "prompt"` — structure a real fork and write a decision memo
 - `/doubt "prompt"` — generate a Descartes-style doubt list and verification plan
+- `/steelman "prompt"` — restate an opposing view in strongest form before critique
+- `/assumption-audit "prompt"` — expose hidden premises, inherited categories, and value conflicts
 - `/minority-report "prompt"` — preserve unresolved objections and revisit triggers
 - `/court-review "prompt"` — separate strategist, operator, censor, historian, sovereign views
 
@@ -126,6 +128,14 @@ The repo now moves toward:
 - explicit overlays
 - low-friction commands
 - revised agent prompts oriented around artifacts and supervision
+
+## Documentation
+
+- `docs/philosophy.md` — philosophy-to-workflow map
+- `docs/recipes.md` — scenario-based usage recipes
+- `docs/install-claude-code.md` — Claude Code install guide
+- `docs/install-opencode.md` — OpenCode install guide
+- `docs/examples/` — example artifacts and command usage
 
 ## License
 
