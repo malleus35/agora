@@ -49,6 +49,7 @@ Agora exposes small entrypoints so users can get value from one command without 
 - `/clarify "prompt"` — extract purpose, constraints, success criteria, unknowns
 - `/decide "prompt"` — structure a real fork and write a decision memo
 - `/doubt "prompt"` — generate a Descartes-style doubt list and verification plan
+- `/dialectic "prompt"` — run explicit Hegelian synthesis mode for contradiction and ideation
 - `/steelman "prompt"` — restate an opposing view in strongest form before critique
 - `/assumption-audit "prompt"` — expose hidden premises, inherited categories, and value conflicts
 - `/minority-report "prompt"` — preserve unresolved objections and revisit triggers
@@ -62,6 +63,8 @@ Agora exposes small entrypoints so users can get value from one command without 
 /decide "Should our agent harness use a shared-spec overlay or a repo-per-agent strategy?"
 
 /doubt "Review this release plan for hidden failure modes before we ship."
+
+/dialectic "We need synthesis between low-friction adoption and philosophical differentiation."
 
 /agora "We have an architecture disagreement and need the right reasoning mode."
 ```
@@ -98,6 +101,35 @@ Common artifacts:
 - Wittgenstein -> semantic and interface clarity
 - Spinoza -> first-principles system reasoning
 - Kant -> coherence, user respect, normative review
+
+## Host quick start
+
+### Claude Code
+
+```bash
+/plugin install --path .
+/clarify "Turn this rough idea into a concrete brief"
+/decide "Choose between two product directions"
+```
+
+### OpenCode
+
+Load the repo's `commands/`, `skills/`, and `agents/` into your host, then start with:
+
+```bash
+/clarify "Clarify this vague workflow problem"
+/doubt "Review this plan before execution"
+```
+
+### Codex or other hosts
+
+Keep the integration minimal.
+Start with the smallest command surface that improves judgment:
+
+```bash
+/clarify "Clarify the real decision"
+/court-review "Review this proposal across separated roles"
+```
 
 ## Installation
 

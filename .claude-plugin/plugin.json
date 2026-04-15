@@ -1,10 +1,10 @@
 {
   "name": "agora",
-  "version": "1.1.0",
-  "description": "Skill-first overlay for supervised AI judgment with philosophical reasoning workflows",
+  "version": "1.2.0",
+  "description": "Host-agnostic skill-first overlay for supervised AI judgment across Claude Code, OpenCode, Codex, and other agents",
   "author": {
     "name": "malleus35"
   },
   "license": "MIT",
-  "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance"]
+  "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "opencode", "codex"]
 }
