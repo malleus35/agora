@@ -4,23 +4,23 @@
     "name": "malleus35"
   },
   "metadata": {
-    "description": "Multi-agent debate harness — 7 philosopher agents plan through Hegelian dialectics",
-    "version": "1.0.0"
+    "description": "Skill-first overlay for supervised AI judgment with philosophical reasoning workflows",
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "agora",
-      "description": "Multi-agent debate harness — 7 philosopher agents plan through Hegelian dialectics",
-      "version": "1.0.0",
+      "description": "Skill-first overlay for supervised AI judgment with philosophical reasoning workflows",
+      "version": "2.0.0",
       "author": {
         "name": "malleus35"
       },
       "source": {
         "source": "url",
         "url": "https://github.com/malleus35/agora.git",
-        "sha": "4d0a7b4006ed0b2ff4dacfdb35091c5d392ced0a"
+        "sha": "17da8c3e84f37b5998da418c403e444cd48f3dc4"
       },
-      "keywords": ["agents", "debate", "dialectics", "multi-agent", "planning", "philosophy"]
+      "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "hermes", "opencode", "codex", "openclaw"]
     }
   ]
 }

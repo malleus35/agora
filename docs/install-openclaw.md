@@ -23,6 +23,8 @@ The relevant CLI package is published on npm as `clawhub`.
 
 ```bash
 npm install -g clawhub
+# or run without global install
+npx clawhub --help
 ```
 
 The published npm metadata confirms:
@@ -42,11 +44,15 @@ Result:
 - Hermes pointed to the manual submission URL:
   - `https://clawhub.ai/submit`
 
-A direct `clawhub` CLI attempt in the current environment also failed because the local Node runtime was too old for the current ClawHub CLI package.
+A direct `clawhub` CLI attempt now works with Node 22, but publishing still requires ClawHub authentication.
+Current verified state:
+- `npx clawhub --help` works on Node 22
+- `clawhub whoami` reports not logged in until authentication is completed
 
 So the current practical status is:
 - OpenClaw support is conceptually aligned through ClawHub-style skill packaging
-- automated publication from this environment is not complete yet
+- the CLI is runnable in this environment
+- authenticated publication is not complete yet
 - manual submission is currently the valid path for ClawHub listing
 
 ## Recommended current usage path

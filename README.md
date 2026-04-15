@@ -170,8 +170,8 @@ It adds supervised judgment where general-purpose agents are weakest:
 
 ## Current state
 
-Agora v2 is an in-repo restructuring in progress.
-The repo now moves toward:
+Agora v2.0.0 is the first release of the skill-first overlay direction.
+The repo now provides:
 - reusable core skills
 - explicit overlays
 - low-friction commands
