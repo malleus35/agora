@@ -39,13 +39,15 @@ This bundle has been live-tested in Hermes as a practical starter set:
 
 ## Use in Hermes
 
-Load a skill in-session:
+The easiest in-session entrypoint is:
 
 ```bash
-/skill clarify-goals
+/skill agora
 ```
 
-Or preload one at launch:
+Then describe the problem naturally and let Agora route to the right workflow.
+
+You can also load a specific skill directly when you already know the exact workflow you want:
 
 ```bash
 hermes -s clarify-goals

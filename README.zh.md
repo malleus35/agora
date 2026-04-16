@@ -9,6 +9,18 @@ Agora 是一个面向监督式 AI 工作的 skill-first overlay。
 
 你可以继续使用 Claude Code、Hermes、OpenCode、Codex、OpenClaw 等宿主。Agora 提供可复用的推理命令、可审阅的产物，以及哲学化但实用的 reasoning overlay。
 
+## Quick start
+
+最简单的使用方式是先从统一入口 `agora` 开始，然后用自然语言描述你的问题。
+
+- Claude Code: `/agora "你的问题"`
+- Hermes: 先 `/skill agora`，然后描述问题
+- Codex: 安装后使用 `$agora "你的问题"`
+- OpenCode: 先用 native skill tool 加载 `agora`，然后描述问题
+
+如果你想直接进入某个具体流程，也可以直接调用对应 skill 或 command。
+例如：`clarify-goals`、`doubt-list`、`court-review`、`dialectic`
+
 ## v2 的变化
 
 Agora 不再首先把自己定位为 debate harness。
@@ -64,10 +76,15 @@ Dialectic、skeptic、genealogy、court review 不是 roleplay，而是实际工
 ### Hermes
 ```bash
 hermes skills tap add malleus35/agora
+hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
+```
+安装后，在会话里最简单的入口是：
+```text
+/skill agora
 ```
 
 ### OpenCode
@@ -75,6 +92,7 @@ hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --cate
 ```text
 Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
 ```
+安装后，最简单的方式是先用 native skill tool 加载 `agora`。
 
 ### OpenClaw
 ```bash
@@ -87,6 +105,10 @@ OpenClaw 既可以通过 ClawHub 安装单个 skill，也可以通过 bundle-plu
 对 Codex 说：
 ```text
 Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.codex/INSTALL.md
+```
+安装后，最简单的入口是：
+```text
+$agora "你的问题"
 ```
 
 ## Installation
@@ -109,7 +131,7 @@ Agora v2.1.0 是当前 skill-first overlay 方向的正式版本。
 ## Registry status
 
 - Hermes / skills.sh：已验证可直接从仓库安装
-- Hermes starter bundle 已验证：clarify-goals、doubt-list、court-review、dialectic
+- Hermes starter bundle 已验证：agora、clarify-goals、doubt-list、court-review、dialectic
 - ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
   - 示例 slug：`agora-clarify-goals`
   - 当前版本：`2.1.0`

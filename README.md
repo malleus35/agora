@@ -10,6 +10,18 @@ It adds clarification, doubt, dissent, synthesis, and governance workflows to th
 You keep Claude Code, Hermes, OpenCode, Codex, OpenClaw, or another host.
 Agora adds reusable reasoning commands, durable judgment artifacts, and philosophical overlays when a problem needs more than raw generation.
 
+## Quick start
+
+The easiest way to use Agora is to start from the common entrypoint and describe your problem naturally.
+
+- Claude Code: `/agora "your problem"`
+- Hermes: `/skill agora` and then describe the problem
+- Codex: `$agora "your problem"` after installation
+- OpenCode: load `agora` with the native skill tool, then describe the problem
+
+If you want to use a specific workflow directly, you can still call the underlying skill or command yourself.
+For example: `clarify-goals`, `doubt-list`, `court-review`, or `dialectic`.
+
 ## What changed in v2
 
 Agora is no longer positioned as a debate harness first.
@@ -105,7 +117,7 @@ Common artifacts:
 - Spinoza -> first-principles system reasoning
 - Kant -> coherence, user respect, normative review
 
-## Host quick start
+## Installation quick start
 
 ### Claude Code
 
@@ -122,8 +134,17 @@ Common artifacts:
 
 ```bash
 hermes skills tap add malleus35/agora
+hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
-hermes -s clarify-goals
+hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
+```
+
+Then in-session:
+
+```text
+/skill agora
 ```
 
 ### OpenCode
@@ -133,6 +154,8 @@ Tell OpenCode:
 ```text
 Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
 ```
+
+After installation, use Agora through the `agora` skill entrypoint.
 
 ### OpenClaw
 
@@ -148,6 +171,12 @@ Tell Codex:
 
 ```text
 Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.codex/INSTALL.md
+```
+
+After installation, the easiest entry is:
+
+```text
+$agora "your problem"
 ```
 
 ### Other hosts
@@ -216,7 +245,7 @@ The repo now provides:
 ## Registry status
 
 - Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
-- Hermes starter bundle verified: `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
+- Hermes starter bundle verified: `agora`, `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
 - ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
   - Published slug: `agora-clarify-goals`
   - Version: `2.1.0`

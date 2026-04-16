@@ -21,11 +21,14 @@ into Codex's skill discovery directory.
 
 ## Recommended first use
 
-After installation, ask Codex to:
-- use `clarify-goals` for vague requests
-- use `doubt-list` for skeptical review
-- use `court-review` for governance questions
-- use `dialectic` for explicit Hegelian synthesis
+After installation, the easiest entrypoint is:
+- `$agora "your problem"`
+
+If you want to bypass routing and use a workflow directly, call the specific skill instead:
+- `clarify-goals`
+- `doubt-list`
+- `court-review`
+- `dialectic`
 
 ## Updating
 

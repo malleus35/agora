@@ -33,6 +33,13 @@ done
 
 4. Restart OpenCode.
 
+## Quick use
+
+After installation, the easiest entrypoint is the `agora` skill itself.
+Load it first, then describe the problem naturally.
+
+If you want a specific workflow directly, load that specific skill instead.
+
 ## Verify
 
 List a few installed skill links:

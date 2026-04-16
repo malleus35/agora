@@ -21,12 +21,14 @@ into `~/.config/opencode/skills/`.
 
 ## Recommended first use
 
-After installation, use OpenCode's native skill tool to:
-- list skills
-- load `clarify-goals`
-- load `doubt-list`
-- load `court-review`
-- load `dialectic`
+After installation, use OpenCode's native skill tool to load `agora` first.
+That gives you a common entrypoint and lets Agora route to the right workflow.
+
+If you want to bypass routing and use a workflow directly, load the specific skill instead:
+- `clarify-goals`
+- `doubt-list`
+- `court-review`
+- `dialectic`
 
 ## Updating
 

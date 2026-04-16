@@ -33,6 +33,16 @@ done
 
 4. Restart Codex.
 
+## Quick use
+
+After installation, the easiest entrypoint is:
+
+```text
+$agora "your problem"
+```
+
+If you want a specific workflow directly, call the corresponding skill instead.
+
 ## Verify
 
 Check that the symlinks exist:
