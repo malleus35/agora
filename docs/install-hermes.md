@@ -42,7 +42,7 @@ This bundle has been live-tested in Hermes as a practical starter set:
 The easiest in-session entrypoint is:
 
 ```bash
-/skill agora
+/agora
 ```
 
 Then describe the problem naturally and let Agora route to the right workflow.

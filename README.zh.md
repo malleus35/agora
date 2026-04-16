@@ -14,7 +14,7 @@ Agora 是一个面向监督式 AI 工作的 skill-first overlay。
 最简单的使用方式是先从统一入口 `agora` 开始，然后用自然语言描述你的问题。
 
 - Claude Code: `/agora "你的问题"`
-- Hermes: 先 `/skill agora`，然后描述问题
+- Hermes: 先 `/agora`，然后描述问题
 - Codex: 安装后使用 `$agora "你的问题"`
 - OpenCode: 先用 native skill tool 加载 `agora`，然后描述问题
 
@@ -84,7 +84,7 @@ hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --cate
 ```
 安装后，在会话里最简单的入口是：
 ```text
-/skill agora
+/agora
 ```
 
 ### OpenCode
@@ -121,7 +121,7 @@ $agora "你的问题"
 
 ## Current state
 
-Agora v2.1.0 是当前 skill-first overlay 方向的正式版本。
+Agora v2.2.0 是当前 skill-first overlay 方向的正式版本。
 当前仓库提供：
 - 可复用的 core skills
 - 明确的 overlays
@@ -134,7 +134,7 @@ Agora v2.1.0 是当前 skill-first overlay 方向的正式版本。
 - Hermes starter bundle 已验证：agora、clarify-goals、doubt-list、court-review、dialectic
 - ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
   - 示例 slug：`agora-clarify-goals`
-  - 当前版本：`2.1.0`
+  - 当前版本：`2.2.0`
 
 ## Documentation
 

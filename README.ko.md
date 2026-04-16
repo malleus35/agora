@@ -14,7 +14,7 @@ Claude Code, Hermes, OpenCode, Codex, OpenClaw 같은 기존 호스트는 그대
 가장 쉬운 사용법은 공통 entrypoint인 Agora부터 부른 뒤, 문제를 자연어로 설명하는 것입니다.
 
 - Claude Code: `/agora "문제 설명"`
-- Hermes: `/skill agora` 후 문제 설명
+- Hermes: `/agora` 후 문제 설명
 - Codex: 설치 후 `$agora "문제 설명"`
 - OpenCode: native skill tool로 `agora`를 먼저 로드한 뒤 문제 설명
 
@@ -84,7 +84,7 @@ hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --cate
 ```
 설치 후 세션 안에서는 다음이 가장 쉽습니다.
 ```text
-/skill agora
+/agora
 ```
 
 ### OpenCode
@@ -121,7 +121,7 @@ $agora "문제 설명"
 
 ## Current state
 
-Agora v2.1.0은 skill-first overlay 방향의 현재 릴리즈입니다.
+Agora v2.2.0은 skill-first overlay 방향의 현재 릴리즈입니다.
 이 repo는 다음을 제공합니다.
 - reusable core skills
 - explicit overlays
@@ -134,7 +134,7 @@ Agora v2.1.0은 skill-first overlay 방향의 현재 릴리즈입니다.
 - Hermes starter bundle 검증 완료: agora, clarify-goals, doubt-list, court-review, dialectic
 - ClawHub / OpenClaw: Node 22에서 CLI 동작 및 authenticated publish 검증 완료
   - published slug 예시: `agora-clarify-goals`
-  - current version: `2.1.0`
+  - current version: `2.2.0`
 
 ## Documentation
 

@@ -56,6 +56,10 @@ Current verified state:
 - published successfully: `agora-doubt-list@2.0.0`
 - published successfully: `agora-court-review@2.0.0`
 - published successfully: `agora-dialectic@2.0.0`
+- published successfully: `agora-clarify-goals@2.1.0`
+- published successfully: `agora-doubt-list@2.1.0`
+- published successfully: `agora-court-review@2.1.0`
+- published successfully: `agora-dialectic@2.1.0`
 
 So the current practical status is:
 - OpenClaw support is conceptually aligned through ClawHub-style skill packaging
