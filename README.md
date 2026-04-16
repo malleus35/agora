@@ -189,7 +189,7 @@ It adds supervised judgment where general-purpose agents are weakest:
 
 ## Current state
 
-Agora v2.0.0 is the first release of the skill-first overlay direction.
+Agora v2.1.0 is the current release of the skill-first overlay direction.
 The repo now provides:
 - reusable core skills
 - explicit overlays
@@ -202,7 +202,7 @@ The repo now provides:
 - Hermes starter bundle verified: `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
 - ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
   - Published slug: `agora-clarify-goals`
-  - Version: `2.0.0`
+  - Version: `2.1.0`
   - Manual submission remains available for additional entries via `https://clawhub.ai/submit`.
 
 ## Documentation

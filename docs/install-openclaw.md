@@ -53,6 +53,9 @@ Current verified state:
 - `npx clawhub --help` works on Node 22
 - `clawhub whoami` works after login
 - published successfully: `agora-clarify-goals@2.0.0`
+- published successfully: `agora-doubt-list@2.0.0`
+- published successfully: `agora-court-review@2.0.0`
+- published successfully: `agora-dialectic@2.0.0`
 
 So the current practical status is:
 - OpenClaw support is conceptually aligned through ClawHub-style skill packaging
