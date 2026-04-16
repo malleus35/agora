@@ -180,7 +180,8 @@ The repo now provides:
 ## Registry status
 
 - Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
-- ClawHub / OpenClaw: automated publish from Hermes currently reports manual submission only via `https://clawhub.ai/submit`.
+- Hermes starter bundle verified: `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
+- ClawHub / OpenClaw: CLI now runs on Node 22; publish requires authenticated `clawhub login`. Manual submission remains available via `https://clawhub.ai/submit`.
 
 ## Documentation
 

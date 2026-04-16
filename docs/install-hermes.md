@@ -29,6 +29,12 @@ hermes skills install skills-sh/malleus35/agora/skills/core/court-review --categ
 hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
 ```
 
+This bundle has been live-tested in Hermes as a practical starter set:
+- `clarify-goals` -> vague problem framing
+- `doubt-list` -> verification and release review
+- `court-review` -> governance and approval separation
+- `dialectic` -> explicit Hegelian synthesis mode
+
 ## Use in Hermes
 
 Load a skill in-session:

@@ -4,13 +4,13 @@
     "name": "malleus35"
   },
   "metadata": {
-    "description": "Skill-first overlay for supervised AI judgment with philosophical reasoning workflows",
+    "description": "Agora v2.0.0 — skill-first overlay for supervised AI judgment with clarification, doubt, dissent, synthesis, and governance workflows",
     "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "agora",
-      "description": "Skill-first overlay for supervised AI judgment with philosophical reasoning workflows",
+      "description": "Agora v2.0.0 — skill-first overlay for supervised AI judgment with clarification, doubt, dissent, synthesis, and governance workflows",
       "version": "2.0.0",
       "author": {
         "name": "malleus35"
