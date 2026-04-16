@@ -3,6 +3,10 @@
 Agora is not an OpenClaw replacement.
 Use it as a judgment workflow layer on top of your OpenClaw setup.
 
+OpenClaw can support both:
+- individual skills via ClawHub skill entries
+- bundled distribution via ClawHub `bundle-plugin` packages
+
 ## Install OpenClaw
 
 OpenClaw's documented recommended path is:

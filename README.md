@@ -122,11 +122,10 @@ hermes -s clarify-goals
 
 ### OpenCode
 
-Load the repo's `commands/`, `skills/`, and `agents/` into your host, then start with:
+Tell OpenCode:
 
-```bash
-/clarify "Clarify this vague workflow problem"
-/doubt "Review this plan before execution"
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
 ```
 
 ### OpenClaw
@@ -137,17 +136,25 @@ openclaw onboard --install-daemon
 # ClawHub listing path is being prepared; see docs/install-openclaw.md
 ```
 
-### Codex or other hosts
+### Codex
 
-Keep the integration minimal.
-Start with the smallest command surface that improves judgment:
+Tell Codex:
 
-```bash
-/clarify "Clarify the real decision"
-/court-review "Review this proposal across separated roles"
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.codex/INSTALL.md
 ```
 
+### Other hosts
+
+Keep the integration minimal.
+Start with the smallest command surface that improves judgment.
+
 ## Installation
+
+Platform-specific installation differs by host.
+Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Codex/OpenCode are best served by instruction-based install.
+
+### Claude Code
 
 ```bash
 # From marketplace (once published)
@@ -156,6 +163,18 @@ Start with the smallest command surface that improves judgment:
 # From Git
 /plugin marketplace add malleus35/agora
 /plugin install agora
+```
+
+### Codex
+
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.codex/INSTALL.md
+```
+
+### OpenCode
+
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
 ```
 
 ## Why this is an overlay
@@ -194,6 +213,8 @@ The repo now provides:
 - `docs/install-hermes.md` — Hermes install guide
 - `docs/install-opencode.md` — OpenCode install guide
 - `docs/install-openclaw.md` — OpenClaw install guide
+- `docs/README.codex.md` — Codex instruction-based install guide
+- `docs/README.opencode.md` — OpenCode instruction-based install guide
 - `docs/examples/` — example artifacts and command usage
 - `mcp/recommended-servers.md` — optional MCP guidance for grounding and governance
 

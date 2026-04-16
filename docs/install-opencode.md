@@ -1,17 +1,22 @@
 # Install Agora on OpenCode
 
-Agora v2 is designed as a host overlay.
-That means you keep OpenCode as the main agent and add Agora's reasoning workflows on top.
+Agora works best on OpenCode through instruction-based installation plus native skill discovery.
+That keeps the install flow simple and matches OpenCode's repo/local skill model.
 
-## Install
+## Quick install
 
-Add the Agora repo or plugin files according to your OpenCode plugin / command loading flow.
-At minimum, ensure these directories are available to the host:
+Tell OpenCode:
 
-- `commands/`
-- `skills/`
-- `agents/`
-- `docs/`
+```text
+Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
+```
+
+## Manual install
+
+Clone the repo and symlink each skill into `~/.config/opencode/skills/`.
+See:
+- `.opencode/INSTALL.md`
+- `docs/README.opencode.md`
 
 ## Verify installation
 
