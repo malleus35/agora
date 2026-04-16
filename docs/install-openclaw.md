@@ -44,16 +44,17 @@ Result:
 - Hermes pointed to the manual submission URL:
   - `https://clawhub.ai/submit`
 
-A direct `clawhub` CLI attempt now works with Node 22, but publishing still requires ClawHub authentication.
+A direct `clawhub` CLI attempt now works with Node 22, and authenticated publish has also been verified.
 Current verified state:
 - `npx clawhub --help` works on Node 22
-- `clawhub whoami` reports not logged in until authentication is completed
+- `clawhub whoami` works after login
+- published successfully: `agora-clarify-goals@2.0.0`
 
 So the current practical status is:
 - OpenClaw support is conceptually aligned through ClawHub-style skill packaging
 - the CLI is runnable in this environment
-- authenticated publication is not complete yet
-- manual submission is currently the valid path for ClawHub listing
+- authenticated publication has been verified for at least one Agora skill
+- additional entries can still use manual submission if needed
 
 ## Recommended current usage path
 

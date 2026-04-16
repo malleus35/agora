@@ -181,7 +181,10 @@ The repo now provides:
 
 - Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
 - Hermes starter bundle verified: `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
-- ClawHub / OpenClaw: CLI now runs on Node 22; publish requires authenticated `clawhub login`. Manual submission remains available via `https://clawhub.ai/submit`.
+- ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
+  - Published slug: `agora-clarify-goals`
+  - Version: `2.0.0`
+  - Manual submission remains available for additional entries via `https://clawhub.ai/submit`.
 
 ## Documentation
 
