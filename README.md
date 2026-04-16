@@ -1,5 +1,7 @@
 # Agora
 
+English | [한국어](README.ko.md) | [中文](README.zh.md) | [日本語](README.ja.md)
+
 > Agents generate options. Agora helps humans supervise judgment.
 
 Agora is a skill-first overlay for supervised AI work.
@@ -163,6 +165,16 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 # From Git
 /plugin marketplace add malleus35/agora
 /plugin install agora
+```
+
+### Hermes
+
+```bash
+hermes skills tap add malleus35/agora
+hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
 ```
 
 ### Codex
