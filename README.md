@@ -109,9 +109,12 @@ Common artifacts:
 ### Claude Code
 
 ```bash
-/plugin install --path .
-/clarify "Turn this rough idea into a concrete brief"
-/decide "Choose between two product directions"
+# From marketplace (once published)
+/plugin install agora
+
+# From Git
+/plugin marketplace add malleus35/agora
+/plugin install agora
 ```
 
 ### Hermes
