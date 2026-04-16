@@ -27,6 +27,7 @@ Dialectic, skepticism, genealogy, and court review are practical workflows, not 
 
 ### Core skills
 Small reusable workflows that can be used independently:
+- agora
 - clarify-goals
 - frame-the-decision
 - compare-options
@@ -174,6 +175,7 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 
 ```bash
 hermes skills tap add malleus35/agora
+hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes

@@ -23,6 +23,7 @@ What this does:
 Start with a small judgment workflow set:
 
 ```bash
+hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
@@ -30,6 +31,7 @@ hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --cate
 ```
 
 This bundle has been live-tested in Hermes as a practical starter set:
+- `agora` -> umbrella entrypoint when you do not remember the exact skill name
 - `clarify-goals` -> vague problem framing
 - `doubt-list` -> verification and release review
 - `court-review` -> governance and approval separation
