@@ -18,7 +18,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/malleus35/agora.git",
-        "sha": "bc36e59f022f61c9c340e2966e67cf1b5fda80fd"
+        "sha": "b007d295a411e455a5186c3f25010d74a4120db4"
       },
       "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "hermes", "opencode", "codex", "openclaw"]
     }
