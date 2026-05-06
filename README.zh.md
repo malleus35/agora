@@ -91,6 +91,10 @@ Modes are not installed as skills. 它们是哲学判断姿态的 enum。
 # skills.sh public index 刷新后：
 hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
+### skills.sh CLI
+```bash
+npx skills add https://github.com/malleus35/agora --skill agora
+```
 安装后，在会话里最简单的入口是：
 ```text
 /agora
@@ -144,6 +148,7 @@ Agora v2.3.0 是当前 skill-first workflow registry 方向的正式版本。
 - Claude Code：`malleus35/agora` marketplace 添加成功，`agora@malleus35-agora` 已以 user scope 更新到 v2.3.0。
 - Codex plugin marketplace：`malleus35/agora` marketplace 添加成功。
 - Hermes / skills.sh：`agora` public package submission PR #2 已创建；skills.sh 搜索索引仍待刷新。
+- skills.sh CLI：当 public `skills/agora/SKILL.md` package 可见后，预期安装命令是 `npx skills add https://github.com/malleus35/agora --skill agora`。
 - Hermes starter bundle 在 v2.3 中以 public `agora` entrypoint 为中心。Modes 不作为 skills 安装。
 - ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
   - 示例 slug：`agora-clarify-goals`

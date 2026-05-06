@@ -26,6 +26,12 @@ After the public index refreshes, the expected install command is:
 hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
 
+The corresponding skills.sh CLI install form is expected to be:
+
+```bash
+npx skills add https://github.com/malleus35/agora --skill agora
+```
+
 What this does:
 - `install` installs the public `agora` entrypoint into your local Hermes skill library
 - `agora` then routes to the correct internal workflow by instruction

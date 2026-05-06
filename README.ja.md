@@ -91,6 +91,10 @@ Modes are not installed as skills. 哲学的な判断姿勢を表す enum です
 # skills.sh public index 更新後:
 hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
+### skills.sh CLI
+```bash
+npx skills add https://github.com/malleus35/agora --skill agora
+```
 インストール後、セッション内で最も簡単な入口は次です。
 ```text
 /agora
@@ -144,6 +148,7 @@ Agora v2.3.0 は skill-first workflow registry 方向の現行リリースです
 - Claude Code: `malleus35/agora` marketplace の追加と `agora@malleus35-agora` の user scope v2.3.0 update が成功しました。
 - Codex plugin marketplace: `malleus35/agora` marketplace の追加が成功しました。
 - Hermes / skills.sh: `agora` public package submission PR #2 を作成済みです。skills.sh search index の反映はまだ待機中です。
+- skills.sh CLI: public `skills/agora/SKILL.md` package が見えるようになった後の想定 install command は `npx skills add https://github.com/malleus35/agora --skill agora` です。
 - Hermes starter bundle は v2.3 で public `agora` entrypoint 中心です。Modes は skills として install しません。
 - ClawHub / OpenClaw: Node 22 上で CLI 動作と authenticated publish を検証済み
   - published slug 例: `agora-clarify-goals`

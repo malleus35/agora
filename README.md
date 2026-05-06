@@ -31,6 +31,12 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
 
+### skills.sh CLI
+
+```bash
+npx skills add https://github.com/malleus35/agora --skill agora
+```
+
 ### OpenCode
 
 ```text
@@ -227,6 +233,7 @@ Verified on 2026-05-06:
 - Claude Code: `malleus35/agora` marketplace registration succeeded, and `agora@malleus35-agora` is updated to v2.3.0 at user scope.
 - Codex plugin marketplace: `malleus35/agora` marketplace registration succeeded.
 - Hermes / skills.sh: `hermes skills publish skills/core/agora --to github --repo malleus35/agora` created PR #2 for the public `agora` skill package. `hermes skills search agora --source skills-sh` did not show the entry yet, so public index availability is pending.
+- skills.sh CLI: expected install form is `npx skills add https://github.com/malleus35/agora --skill agora` after the public `skills/agora/SKILL.md` package is visible.
 - Hermes starter bundle: v2.3 is centered on the public `agora` entrypoint; modes are not installed as skills.
 - ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
   - Published slug: `agora-clarify-goals`
