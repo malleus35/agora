@@ -61,7 +61,7 @@ assert_contains "docs/README.codex.md" "Only core skills are installed as callab
 assert_contains ".codex/INSTALL.md" "skills/core/*"
 assert_contains ".claude-plugin/plugin.json" "\"version\": \"2.3.1\""
 assert_contains ".claude-plugin/marketplace.json" "\"version\": \"2.3.1\""
-assert_contains ".claude-plugin/marketplace.json" "\"sha\": \"d9bab12dd9ca53359ae8bbbf087b28266e56a1ac\""
+assert_contains ".claude-plugin/marketplace.json" "\"sha\": \"d1ac6757d5b7af1dfb72c96504055306db449630\""
 
 if grep -R -n "skills/overlays/.*install\\|skills/overlays/dialectic\\|dialectic overlay\\|skeptic overlay\\|genealogy overlay\\|court overlay\\|Skill or overlay" \
   README*.md docs/README.* docs/install-*.md .codex/INSTALL.md .opencode/INSTALL.md commands skills 2>/dev/null; then
