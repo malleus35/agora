@@ -48,7 +48,7 @@ assert_contains "README.zh.md" "cartesian-grill"
 assert_contains "README.ja.md" "cartesian-grill"
 assert_contains ".claude-plugin/plugin.json" "\"version\": \"2.3.0\""
 assert_contains ".claude-plugin/marketplace.json" "\"version\": \"2.3.0\""
-assert_contains ".claude-plugin/marketplace.json" "\"sha\": \"__RELEASE_SHA_PLACEHOLDER__\""
+assert_contains ".claude-plugin/marketplace.json" "\"sha\": \"99b0707d73bbc678f91de850b04ac15c941dece3\""
 
 if grep -R -n "skills/overlays/.*install\\|skills/overlays/dialectic\\|dialectic overlay\\|skeptic overlay\\|genealogy overlay\\|court overlay\\|Skill or overlay" \
   README*.md docs/README.* docs/install-*.md .codex/INSTALL.md .opencode/INSTALL.md commands skills 2>/dev/null; then
