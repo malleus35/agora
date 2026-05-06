@@ -2,6 +2,7 @@
 
 Enable Agora in Codex through native skill discovery.
 Because Agora stores callable skills under `skills/core/`, installation flattens those skill folders into Codex's global skills directory.
+Only `skills/core/*` is installed as callable Codex skills.
 Modes are documented in `docs/modes.md` and are not installed as skills.
 
 ## Prerequisites
@@ -32,7 +33,21 @@ for dir in ~/.codex/agora/skills/core/*; do
 done
 ```
 
-4. Restart Codex.
+4. Remove stale overlay links from older Agora installs:
+
+```bash
+for name in dialectic skeptic genealogy court; do
+  path="$HOME/.agents/skills/$name"
+  if [ -L "$path" ]; then
+    target=$(readlink "$path")
+    case "$target" in
+      "$HOME/.codex/agora/skills/overlays/"*) rm -f "$path" ;;
+    esac
+  fi
+done
+```
+
+5. Restart Codex.
 
 ## Quick use
 

@@ -18,24 +18,17 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 ### Claude Code
 
 ```bash
-# From marketplace (once published)
-/plugin install agora
-
-# From Git
+# Verified Git marketplace path
 /plugin marketplace add malleus35/agora
-/plugin install agora
+/plugin install agora@malleus35-agora
 ```
 
 ### Hermes
 
 ```bash
-hermes skills tap add malleus35/agora
-hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/cartesian-grill --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/decision-memo --category agora --yes
+# skills.sh publication is submitted from the public package at skills/agora.
+# Once the public index refreshes:
+hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
 
 ### OpenCode
@@ -221,10 +214,20 @@ The repo now provides:
 - low-friction commands
 - revised agent prompts oriented around artifacts and supervision
 
+## Local reinstall status
+
+Verified on 2026-05-06:
+- Codex local source clone updated to `origin/main`.
+- `~/.agents/skills` was refreshed from `skills/core/*`.
+- New callable skills `cartesian-grill`, `prd-from-requirements`, and `tdd-subagent-implementation` are linked locally.
+- Former callable overlay links `dialectic`, `skeptic`, `genealogy`, and `court` were removed from `~/.agents/skills`.
+
 ## Registry status
 
-- Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
-- Hermes starter bundle verified previously. In v2.3, modes are not installed as skills; install core skills such as `agora`, `clarify-goals`, `cartesian-grill`, `doubt-list`, `court-review`, and `decision-memo`.
+- Claude Code: `malleus35/agora` marketplace registration succeeded, and `agora@malleus35-agora` is updated to v2.3.0 at user scope.
+- Codex plugin marketplace: `malleus35/agora` marketplace registration succeeded.
+- Hermes / skills.sh: `hermes skills publish skills/core/agora --to github --repo malleus35/agora` created PR #2 for the public `agora` skill package. `hermes skills search agora --source skills-sh` did not show the entry yet, so public index availability is pending.
+- Hermes starter bundle: v2.3 is centered on the public `agora` entrypoint; modes are not installed as skills.
 - ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
   - Published slug: `agora-clarify-goals`
   - Version: `2.3.0`

@@ -17,6 +17,7 @@ Agora's install flow clones the repo locally and symlinks each skill folder from
 - `skills/core/`
 
 into Codex's skill discovery directory.
+Only core skills are installed as callable skills.
 
 Modes such as `dialectic`, `skeptic`, `genealogy`, and `court` are documented in `docs/modes.md`.
 Modes are not installed as skills.

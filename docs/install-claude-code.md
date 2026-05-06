@@ -2,16 +2,18 @@
 
 ## Install
 
-From the repo root:
+Verified user-scope marketplace install:
 
 ```bash
-/plugin install --path .
+/plugin marketplace add malleus35/agora
+/plugin install agora@malleus35-agora
 ```
 
-Or, once published through the marketplace:
+For local development, add the current checkout as a marketplace source first:
 
 ```bash
-/plugin install agora
+/plugin marketplace add .
+/plugin install agora@malleus35-agora
 ```
 
 ## Verify installation
@@ -46,14 +48,14 @@ It adds overlay workflows for:
 
 ## Update / upgrade
 
-If installed from local path, reinstall after pulling updates:
+If installed from the Git marketplace, update the marketplace and plugin:
 
 ```bash
-git pull
-/plugin install --path .
+/plugin marketplace update malleus35-agora
+/plugin update agora
 ```
 
-If installed from marketplace, use the host's plugin update flow when available.
+The verified 2026-05-06 CLI path added `malleus35/agora`, updated `agora@malleus35-agora` from 2.2.0 to 2.3.0 at user scope, and reported that Claude Code should be restarted to apply the update.
 
 ## Troubleshooting
 

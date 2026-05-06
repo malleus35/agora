@@ -80,20 +80,16 @@ Modes are not installed as skills. 它们是哲学判断姿态的 enum。
 
 ### Claude Code
 ```bash
-/plugin install --path .
+/plugin marketplace add malleus35/agora
+/plugin install agora@malleus35-agora
 /clarify "把这个模糊想法变成明确 brief"
 /decide "在两个产品方向之间做选择"
 ```
 
 ### Hermes
 ```bash
-hermes skills tap add malleus35/agora
-hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/cartesian-grill --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/core/decision-memo --category agora --yes
+# skills.sh public index 刷新后：
+hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
 安装后，在会话里最简单的入口是：
 ```text
@@ -144,8 +140,11 @@ Agora v2.3.0 是当前 skill-first workflow registry 方向的正式版本。
 
 ## Registry status
 
-- Hermes / skills.sh：已验证可直接从仓库安装
-- Hermes starter bundle 在 v2.3 中以 core skill 为中心：agora、clarify-goals、cartesian-grill、doubt-list、court-review、decision-memo
+- Local reinstall：截至 2026-05-06，`~/.agents/skills` 已从 `skills/core/*` 重新链接，旧 callable overlay 链接已移除。
+- Claude Code：`malleus35/agora` marketplace 添加成功，`agora@malleus35-agora` 已以 user scope 更新到 v2.3.0。
+- Codex plugin marketplace：`malleus35/agora` marketplace 添加成功。
+- Hermes / skills.sh：`agora` public package submission PR #2 已创建；skills.sh 搜索索引仍待刷新。
+- Hermes starter bundle 在 v2.3 中以 public `agora` entrypoint 为中心。Modes 不作为 skills 安装。
 - ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
   - 示例 slug：`agora-clarify-goals`
   - 当前版本：`2.3.0`
