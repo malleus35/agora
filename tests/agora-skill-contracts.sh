@@ -49,6 +49,10 @@ assert_contains "README.md" "Modes are not installed as skills"
 assert_contains "README.md" "Local reinstall status"
 assert_contains "README.md" "skills.sh"
 assert_contains "README.md" "Agora v2.3.1"
+assert_contains "README.md" "Claude Code and Codex"
+assert_contains "README.md" "Unsupported or pending providers are intentionally not listed in the quick start."
+assert_contains ".claude-plugin/plugin.json" "Claude Code and Codex"
+assert_contains ".claude-plugin/marketplace.json" "Claude Code and Codex"
 assert_contains "README.ko.md" "cartesian-grill"
 assert_contains "README.zh.md" "cartesian-grill"
 assert_contains "README.ja.md" "cartesian-grill"
@@ -62,6 +66,10 @@ assert_contains ".claude-plugin/marketplace.json" "\"sha\": \"d9bab12dd9ca53359a
 if grep -R -n "skills/overlays/.*install\\|skills/overlays/dialectic\\|dialectic overlay\\|skeptic overlay\\|genealogy overlay\\|court overlay\\|Skill or overlay" \
   README*.md docs/README.* docs/install-*.md .codex/INSTALL.md .opencode/INSTALL.md commands skills 2>/dev/null; then
   fail "stale callable overlay wording found"
+fi
+
+if grep -n "Hermes\\|OpenCode\\|OpenClaw\\|ClawHub" README*.md .claude-plugin/plugin.json .claude-plugin/marketplace.json 2>/dev/null; then
+  fail "unsupported provider wording found in public README or plugin metadata"
 fi
 
 workflow_count=$(grep -c "^workflow:" docs/workflows.md)
