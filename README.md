@@ -4,16 +4,15 @@ English | [한국어](README.ko.md) | [中文](README.zh.md) | [日本語](READM
 
 > Agents generate options. Agora helps humans supervise judgment.
 
-Agora is a skill-first overlay for supervised AI work.
-It adds clarification, doubt, dissent, synthesis, and governance workflows to the host agent you already use.
+Agora is a skill-first workflow registry for supervised AI judgment in Claude Code and Codex.
+It adds clarification, doubt, dissent, synthesis, and governance workflows to agent work that needs reviewable artifacts instead of one-off answers.
 
-You keep Claude Code, Hermes, OpenCode, Codex, OpenClaw, or another host.
-Agora adds reusable reasoning commands, durable judgment artifacts, workflow registry routing, and philosophical modes when a problem needs more than raw generation.
+Agora provides reusable reasoning commands, durable judgment artifacts, workflow registry routing, and philosophical modes when a problem needs more than raw generation.
+Unsupported or pending providers are intentionally not listed in the quick start.
 
 ## Installation quick start
 
-Platform-specific installation differs by host.
-Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Codex/OpenCode are best served by instruction-based install.
+Use the verified surfaces below.
 
 ### Claude Code
 
@@ -23,31 +22,10 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 /plugin install agora@malleus35-agora
 ```
 
-### Hermes
-
-```bash
-# skills.sh publication is submitted from the public package at skills/agora.
-# Once the public index refreshes:
-hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
-```
-
 ### skills.sh CLI
 
 ```bash
 npx skills add https://github.com/malleus35/agora --skill agora
-```
-
-### OpenCode
-
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
-```
-
-### OpenClaw
-
-```bash
-npm install -g openclaw@latest
-openclaw onboard --install-daemon
 ```
 
 ### Codex
@@ -66,22 +44,10 @@ The easiest way to use Agora is to start from the common entrypoint and describe
 /agora "your problem"
 ```
 
-### Hermes
-
-```text
-/agora
-```
-
 ### Codex
 
 ```text
 $agora "your problem"
-```
-
-### OpenCode
-
-```text
-Load the agora skill with the native skill tool, then describe your problem naturally.
 ```
 
 If you want to use a specific workflow directly, you can still call the underlying skill or command yourself.
@@ -213,7 +179,7 @@ It adds supervised judgment where general-purpose agents are weakest:
 ## Current state
 
 Agora v2.3.1 is the current release of the skill-first workflow registry direction.
-It includes the v2.3 workflow registry plus the deployment/status refresh for Claude Code, Codex, and skills.sh.
+It includes the v2.3 workflow registry plus the deployment/status refresh for Claude Code, Codex, and skills.sh URL installation.
 The repo now provides:
 - reusable core skills
 - modes documented as enum-like judgment settings
@@ -233,13 +199,7 @@ Verified on 2026-05-06:
 
 - Claude Code: `malleus35/agora` marketplace registration succeeded, and `agora@malleus35-agora` is ready for the v2.3.1 metadata release.
 - Codex plugin marketplace: `malleus35/agora` marketplace registration succeeded.
-- Hermes / skills.sh: `hermes skills publish skills/core/agora --to github --repo malleus35/agora` created PR #2 for the public `agora` skill package. `hermes skills search agora --source skills-sh` did not show the entry yet, so public search index availability is pending.
 - skills.sh CLI: URL-based discovery is verified with `npx skills add https://github.com/malleus35/agora --skill agora --list`; the expected install form is `npx skills add https://github.com/malleus35/agora --skill agora`.
-- Hermes starter bundle: v2.3 is centered on the public `agora` entrypoint; modes are not installed as skills.
-- ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
-  - Published slug: `agora-clarify-goals`
-  - Version: `2.3.0`
-  - Manual submission remains available for additional entries via `https://clawhub.ai/submit`.
 
 ## Documentation
 
@@ -249,11 +209,7 @@ Verified on 2026-05-06:
 - `docs/PRD-v3.md` — v2.3 product requirements
 - `docs/recipes.md` — scenario-based usage recipes
 - `docs/install-claude-code.md` — Claude Code install guide
-- `docs/install-hermes.md` — Hermes install guide
-- `docs/install-opencode.md` — OpenCode install guide
-- `docs/install-openclaw.md` — OpenClaw install guide
 - `docs/README.codex.md` — Codex instruction-based install guide
-- `docs/README.opencode.md` — OpenCode instruction-based install guide
 - `docs/examples/` — example artifacts and command usage
 - `mcp/recommended-servers.md` — optional MCP guidance for grounding and governance
 

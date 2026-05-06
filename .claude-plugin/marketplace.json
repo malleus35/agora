@@ -4,13 +4,13 @@
     "name": "malleus35"
   },
   "metadata": {
-    "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, governance, and deployment-ready public skill packaging",
+    "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment in Claude Code and Codex",
     "version": "2.3.1"
   },
   "plugins": [
     {
       "name": "agora",
-      "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, governance, and deployment-ready public skill packaging",
+      "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment in Claude Code and Codex",
       "version": "2.3.1",
       "author": {
         "name": "malleus35"
@@ -20,7 +20,7 @@
         "url": "https://github.com/malleus35/agora.git",
         "sha": "d9bab12dd9ca53359ae8bbbf087b28266e56a1ac"
       },
-      "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "hermes", "opencode", "codex", "openclaw"]
+      "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "codex"]
     }
   ]
 }

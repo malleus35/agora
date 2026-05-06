@@ -4,19 +4,18 @@
 
 > エージェントは選択肢を生成し、Agora は人間が判断を監督できるようにする。
 
-Agora は supervised AI work のための skill-first overlay です。
-既存のホストエージェントの上に clarification、doubt、dissent、synthesis、governance のワークフローを追加します。
+Agora は Claude Code と Codex のための skill-first workflow registry です。
+レビュー可能な artifact が必要な agent work に clarification、doubt、dissent、synthesis、governance のワークフローを追加します。
 
-Claude Code、Hermes、OpenCode、Codex、OpenClaw などのホストはそのまま使えます。Agora は再利用可能な reasoning command、レビュー可能な artifact、workflow registry、そして実用的な philosophical mode を提供します。
+Agora は再利用可能な reasoning command、レビュー可能な artifact、workflow registry、そして実用的な philosophical mode を提供します。
+未検証または pending の provider は quick start に意図的に載せていません。
 
 ## Quick start
 
 最も簡単な使い方は、共通エントリーポイントである `agora` から始めて、問題を自然言語で説明することです。
 
 - Claude Code: `/agora "あなたの問題"`
-- Hermes: まず `/agora` を使い、その後で問題を説明
 - Codex: インストール後に `$agora "あなたの問題"`
-- OpenCode: native skill tool で `agora` を先に読み込み、その後で問題を説明
 
 特定のフローを直接使いたい場合は、対応する skill や command を直接呼び出すこともできます。
 例: `clarify-goals`、`cartesian-grill`、`doubt-list`、`court-review`
@@ -86,33 +85,10 @@ Modes are not installed as skills. 哲学的な判断姿勢を表す enum です
 /decide "2つの製品方針のどちらを選ぶべきか決めて"
 ```
 
-### Hermes
-```bash
-# skills.sh public index 更新後:
-hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
-```
 ### skills.sh CLI
 ```bash
 npx skills add https://github.com/malleus35/agora --skill agora
 ```
-インストール後、セッション内で最も簡単な入口は次です。
-```text
-/agora
-```
-
-### OpenCode
-OpenCode に次のように伝えてください：
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
-```
-インストール後は、native skill tool で `agora` を先に読み込むのが最も簡単です。
-
-### OpenClaw
-```bash
-npm install -g openclaw@latest
-openclaw onboard --install-daemon
-```
-OpenClaw では個別 skill 配布に加えて bundle-plugin によるまとめ配布も可能です。
 
 ### Codex
 Codex に次のように伝えてください：
@@ -128,14 +104,13 @@ $agora "あなたの問題"
 
 ホストごとにインストール方法は異なります。
 - Claude Code: plugin
-- Hermes: repo-backed skills.sh install
-- OpenClaw: 個別 skill または bundle-plugin
-- Codex / OpenCode: instruction ベースのインストール
+- Codex: instruction ベースのインストール
+- skills.sh CLI: GitHub URL ベースのインストール
 
 ## Current state
 
 Agora v2.3.1 は skill-first workflow registry 方向の現行リリースです。
-v2.3 workflow registry に Claude Code、Codex、skills.sh の配布・状態更新を加えたリリースです。
+v2.3 workflow registry に Claude Code、Codex、skills.sh URL install の状態更新を加えたリリースです。
 このリポジトリは次を提供します。
 - reusable core skills
 - enum-like modes
@@ -148,12 +123,7 @@ v2.3 workflow registry に Claude Code、Codex、skills.sh の配布・状態更
 - Local reinstall: 2026-05-06 時点で `~/.agents/skills` を `skills/core/*` から再リンクし、旧 callable overlay リンクを削除しました。
 - Claude Code: `malleus35/agora` marketplace の追加が成功し、`agora@malleus35-agora` は v2.3.1 metadata release の準備ができています。
 - Codex plugin marketplace: `malleus35/agora` marketplace の追加が成功しました。
-- Hermes / skills.sh: `agora` public package submission PR #2 を作成済みです。skills.sh search index の反映はまだ待機中です。
 - skills.sh CLI: URL-based discovery は `npx skills add https://github.com/malleus35/agora --skill agora --list` で検証済みです。想定 install command は `npx skills add https://github.com/malleus35/agora --skill agora` です。
-- Hermes starter bundle は v2.3 で public `agora` entrypoint 中心です。Modes は skills として install しません。
-- ClawHub / OpenClaw: Node 22 上で CLI 動作と authenticated publish を検証済み
-  - published slug 例: `agora-clarify-goals`
-  - current version: `2.3.0`
 
 ## Documentation
 
@@ -163,11 +133,7 @@ v2.3 workflow registry に Claude Code、Codex、skills.sh の配布・状態更
 - `docs/PRD-v3.md`
 - `docs/recipes.md`
 - `docs/install-claude-code.md`
-- `docs/install-hermes.md`
-- `docs/install-opencode.md`
-- `docs/install-openclaw.md`
 - `docs/README.codex.md`
-- `docs/README.opencode.md`
 - `docs/examples/`
 - `mcp/recommended-servers.md`
 

@@ -1,10 +1,10 @@
 {
   "name": "agora",
   "version": "2.3.1",
-  "description": "Host-agnostic skill-first workflow registry for supervised AI judgment across Claude Code, Hermes, OpenCode, Codex, and OpenClaw",
+  "description": "Skill-first workflow registry for supervised AI judgment in Claude Code and Codex",
   "author": {
     "name": "malleus35"
   },
   "license": "MIT",
-  "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "hermes", "opencode", "codex", "openclaw"]
+  "keywords": ["agents", "skills", "overlay", "judgment", "philosophy", "decision-making", "governance", "claude-code", "codex"]
 }

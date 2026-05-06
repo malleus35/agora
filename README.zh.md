@@ -4,19 +4,18 @@
 
 > Agent 负责生成选项，Agora 帮助人类监督判断。
 
-Agora 是一个面向监督式 AI 工作的 skill-first overlay。
-它在你已经使用的宿主代理之上增加 clarification、doubt、dissent、synthesis、governance 工作流。
+Agora 是一个面向 Claude Code 与 Codex 的 skill-first workflow registry，用于监督式 AI 判断。
+它为需要可审阅 artifact 的代理工作增加 clarification、doubt、dissent、synthesis、governance 工作流。
 
-你可以继续使用 Claude Code、Hermes、OpenCode、Codex、OpenClaw 等宿主。Agora 提供可复用的推理命令、可审阅的产物、workflow registry，以及哲学化但实用的 mode。
+Agora 提供可复用的推理命令、可审阅的产物、workflow registry，以及哲学化但实用的 mode。
+未验证或仍处于 pending 的 provider 不会出现在 quick start 中。
 
 ## Quick start
 
 最简单的使用方式是先从统一入口 `agora` 开始，然后用自然语言描述你的问题。
 
 - Claude Code: `/agora "你的问题"`
-- Hermes: 先 `/agora`，然后描述问题
 - Codex: 安装后使用 `$agora "你的问题"`
-- OpenCode: 先用 native skill tool 加载 `agora`，然后描述问题
 
 如果你想直接进入某个具体流程，也可以直接调用对应 skill 或 command。
 例如：`clarify-goals`、`cartesian-grill`、`doubt-list`、`court-review`
@@ -86,33 +85,10 @@ Modes are not installed as skills. 它们是哲学判断姿态的 enum。
 /decide "在两个产品方向之间做选择"
 ```
 
-### Hermes
-```bash
-# skills.sh public index 刷新后：
-hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
-```
 ### skills.sh CLI
 ```bash
 npx skills add https://github.com/malleus35/agora --skill agora
 ```
-安装后，在会话里最简单的入口是：
-```text
-/agora
-```
-
-### OpenCode
-对 OpenCode 说：
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/agora/refs/heads/main/.opencode/INSTALL.md
-```
-安装后，最简单的方式是先用 native skill tool 加载 `agora`。
-
-### OpenClaw
-```bash
-npm install -g openclaw@latest
-openclaw onboard --install-daemon
-```
-OpenClaw 既可以通过 ClawHub 安装单个 skill，也可以通过 bundle-plugin 做打包分发。
 
 ### Codex
 对 Codex 说：
@@ -128,14 +104,13 @@ $agora "你的问题"
 
 不同宿主的安装方式不同：
 - Claude Code：plugin
-- Hermes：repo-backed skills.sh 安装
-- OpenClaw：单个 skill 或 bundle-plugin
-- Codex / OpenCode：基于 instruction 的安装
+- Codex：基于 instruction 的安装
+- skills.sh CLI：基于 GitHub URL 的安装
 
 ## Current state
 
 Agora v2.3.1 是当前 skill-first workflow registry 方向的正式版本。
-它包含 v2.3 workflow registry，并补充了 Claude Code、Codex、skills.sh 的发布与状态刷新。
+它包含 v2.3 workflow registry，并补充了 Claude Code、Codex、skills.sh URL install 的状态刷新。
 当前仓库提供：
 - 可复用的 core skills
 - enum-like modes
@@ -148,12 +123,7 @@ Agora v2.3.1 是当前 skill-first workflow registry 方向的正式版本。
 - Local reinstall：截至 2026-05-06，`~/.agents/skills` 已从 `skills/core/*` 重新链接，旧 callable overlay 链接已移除。
 - Claude Code：`malleus35/agora` marketplace 添加成功，`agora@malleus35-agora` 已准备好 v2.3.1 metadata release。
 - Codex plugin marketplace：`malleus35/agora` marketplace 添加成功。
-- Hermes / skills.sh：`agora` public package submission PR #2 已创建；skills.sh 搜索索引仍待刷新。
 - skills.sh CLI：URL-based discovery 已用 `npx skills add https://github.com/malleus35/agora --skill agora --list` 验证；预期安装命令是 `npx skills add https://github.com/malleus35/agora --skill agora`。
-- Hermes starter bundle 在 v2.3 中以 public `agora` entrypoint 为中心。Modes 不作为 skills 安装。
-- ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
-  - 示例 slug：`agora-clarify-goals`
-  - 当前版本：`2.3.0`
 
 ## Documentation
 
@@ -163,11 +133,7 @@ Agora v2.3.1 是当前 skill-first workflow registry 方向的正式版本。
 - `docs/PRD-v3.md`
 - `docs/recipes.md`
 - `docs/install-claude-code.md`
-- `docs/install-hermes.md`
-- `docs/install-opencode.md`
-- `docs/install-openclaw.md`
 - `docs/README.codex.md`
-- `docs/README.opencode.md`
 - `docs/examples/`
 - `mcp/recommended-servers.md`
 
