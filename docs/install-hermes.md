@@ -19,14 +19,15 @@ Result:
 - Hermes scanned `agora` as `SAFE`
 - Hermes created PR #2: `https://github.com/malleus35/agora/pull/2`
 - `hermes skills search agora --source skills-sh` did not show the entry yet, so public index availability is pending
+- `npx skills add https://github.com/malleus35/agora --skill agora --list` found the public `agora` package without installing it
 
-After the public index refreshes, the expected install command is:
+After the public index refreshes, the expected Hermes install command is:
 
 ```bash
 hermes skills install skills-sh/malleus35/agora/agora --category agora --yes
 ```
 
-The corresponding skills.sh CLI install form is expected to be:
+The corresponding skills.sh CLI install form is:
 
 ```bash
 npx skills add https://github.com/malleus35/agora --skill agora
@@ -100,6 +101,6 @@ For this project, the public package path is `skills/agora/SKILL.md`; direct loc
 
 ## Troubleshooting
 
-- If `hermes skills search agora` does not show results immediately, use the direct identifier form shown above.
+- If `hermes skills search agora` does not show results immediately, use the skills.sh CLI URL form shown above.
 - If a skill installs but does not load automatically, use `/skill <name>` explicitly.
 - If you want the whole Agora workflow surface in Hermes, start from the public `agora` package; direct local hosts can install the underlying `skills/core/*` set.
