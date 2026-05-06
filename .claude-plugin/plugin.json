@@ -1,7 +1,7 @@
 {
   "name": "agora",
-  "version": "2.2.0",
-  "description": "Host-agnostic skill-first overlay for supervised AI judgment across Claude Code, Hermes, OpenCode, Codex, and OpenClaw",
+  "version": "2.3.0",
+  "description": "Host-agnostic skill-first workflow registry for supervised AI judgment across Claude Code, Hermes, OpenCode, Codex, and OpenClaw",
   "author": {
     "name": "malleus35"
   },

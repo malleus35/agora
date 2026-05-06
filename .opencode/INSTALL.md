@@ -1,7 +1,8 @@
 # Installing Agora for OpenCode
 
 Enable Agora in OpenCode through native skill discovery.
-Because Agora stores skills under `skills/core/` and `skills/overlays/`, installation flattens those skill folders into OpenCode's discovered skills path.
+Because Agora stores callable skills under `skills/core/`, installation flattens those skill folders into OpenCode's discovered skills path.
+Modes are documented in `docs/modes.md` and are not installed as skills.
 
 ## Prerequisites
 
@@ -25,7 +26,7 @@ mkdir -p ~/.config/opencode/skills
 3. Symlink each Agora skill into OpenCode's global skills directory:
 
 ```bash
-for dir in ~/.config/opencode/agora/skills/core/* ~/.config/opencode/agora/skills/overlays/*; do
+for dir in ~/.config/opencode/agora/skills/core/*; do
   name=$(basename "$dir")
   ln -sfn "$dir" "$HOME/.config/opencode/skills/$name"
 done
@@ -45,7 +46,7 @@ If you want a specific workflow directly, load that specific skill instead.
 List a few installed skill links:
 
 ```bash
-ls -la ~/.config/opencode/skills | grep -E 'clarify-goals|doubt-list|court-review|dialectic'
+ls -la ~/.config/opencode/skills | grep -E 'clarify-goals|cartesian-grill|doubt-list|court-review|decision-memo'
 ```
 
 Then in OpenCode ask it to use the native skill tool, for example:
@@ -59,9 +60,10 @@ Use the skill tool to load clarify-goals.
 
 Start with:
 - `clarify-goals`
+- `cartesian-grill`
 - `doubt-list`
 - `court-review`
-- `dialectic`
+- `decision-memo`
 
 ## Updating
 
@@ -74,7 +76,7 @@ The symlinks continue to point at the updated repo.
 ## Uninstalling
 
 ```bash
-for name in clarify-goals frame-the-decision steelman doubt-list compare-options assumption-audit minority-report synthesis-memo decision-memo court-review dialectic skeptic genealogy court; do
+for name in agora clarify-goals cartesian-grill prd-from-requirements tdd-subagent-implementation frame-the-decision steelman doubt-list compare-options assumption-audit minority-report synthesis-memo decision-memo court-review dialectic skeptic genealogy court; do
   rm -f "$HOME/.config/opencode/skills/$name"
 done
 rm -rf ~/.config/opencode/agora

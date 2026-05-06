@@ -10,6 +10,7 @@ Agora is the main entrypoint for choosing the right reasoning workflow.
 It is not only a dialectical debate launcher.
 
 Use this command to decide whether the problem needs clarification, decision framing, skepticism, genealogy, court review, or dialectical synthesis.
+Modes such as dialectic, skeptic, genealogy, and court are workflow settings, not callable skills.
 
 ## Routing logic
 
@@ -31,18 +32,18 @@ Route to:
 4. minority-report if unresolved objections remain
 
 ### If the request is open-ended ideation or strategic reframing
-Route to the dialectic overlay.
+Route to dialectic mode.
 Use Hegelian synthesis only when contradiction is genuinely productive.
 Do not force dialectic on straightforward tasks.
 
 ### If the request is verification, QA, security, or risk review
-Route to the skeptic overlay and doubt-list.
+Route to skeptic mode and doubt-list.
 
 ### If the request is about hidden assumptions, inherited categories, or value conflict
-Route to the genealogy overlay and assumption-audit.
+Route to genealogy mode and assumption-audit.
 
 ### If the request is governance, approval, responsibility tracing, or multi-stakeholder review
-Route to the court overlay and court-review.
+Route to court mode and court-review.
 
 ## Small examples
 
@@ -54,13 +55,13 @@ Route to the court overlay and court-review.
 # -> frame-the-decision + compare-options
 
 /agora "We need fresh strategic options for positioning Agora v2."
-# -> dialectic overlay
+# -> dialectic mode
 
 /agora "Before shipping, tell me what this proposal is assuming without evidence."
-# -> skeptic overlay + doubt-list
+# -> skeptic mode + doubt-list
 
 /agora "We need approval across strategist, operator, and oversight perspectives."
-# -> court overlay + court-review
+# -> court mode + court-review
 ```
 
 ## Completion rule

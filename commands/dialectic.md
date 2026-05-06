@@ -1,5 +1,5 @@
 ---
-description: "Run the Hegelian dialectic overlay for ideation, contradiction, and synthesis"
+description: "Run Hegelian dialectic mode for ideation, contradiction, and synthesis"
 argument-hint: "[open-ended problem, strategic tension, or opposed positions]"
 allowed-tools: ["Read", "Write"]
 ---
@@ -10,7 +10,7 @@ Use this command when contradiction is productive and a higher-order synthesis m
 
 ## Purpose
 
-Route explicitly into the dialectic overlay.
+Route explicitly into dialectic mode.
 This is the direct command for Hegelian mode when you already know you want:
 - ideation through tension
 - strategic reframing

@@ -68,7 +68,7 @@ Hegel is for cases where contradiction is productive.
 He should not dominate every workflow. He is most useful when two strong positions exist and a higher-order synthesis may produce a better path.
 
 ### Workflow mapping
-- overlay: `dialectic`
+- mode: `dialectic`
 - related core skills:
   - `frame-the-decision`
   - `compare-options`
@@ -102,7 +102,7 @@ Nietzsche is for cases where the team may be trapped inside inherited language o
 He exposes hidden assumptions and asks who benefits from the current frame.
 
 ### Workflow mapping
-- overlay: `genealogy`
+- mode: `genealogy`
 - core skill: `assumption-audit`
 - common commands: `/assumption-audit`, `/agora`
 - output artifacts:
@@ -133,7 +133,7 @@ The court mode turns multi-stakeholder review into a separated workflow.
 It is for proposals that require distinct responsibility-bearing perspectives rather than one blended consensus paragraph.
 
 ### Workflow mapping
-- overlay: `court`
+- mode: `court`
 - core skill: `court-review`
 - common commands: `/court-review`, `/agora`
 - output artifacts:

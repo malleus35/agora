@@ -25,17 +25,22 @@ Start with a small judgment workflow set:
 ```bash
 hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/cartesian-grill --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/decision-memo --category agora --yes
 ```
 
-This bundle has been live-tested in Hermes as a practical starter set:
+This is the recommended v2.3 starter set:
 - `agora` -> umbrella entrypoint when you do not remember the exact skill name
 - `clarify-goals` -> vague problem framing
+- `cartesian-grill` -> one-question-at-a-time plan pressure testing
 - `doubt-list` -> verification and release review
 - `court-review` -> governance and approval separation
-- `dialectic` -> explicit Hegelian synthesis mode
+- `decision-memo` -> durable decision artifact
+
+Modes such as `dialectic`, `skeptic`, `genealogy`, and `court` are documented in `docs/modes.md`.
+Modes are not installed as skills.
 
 ## Use in Hermes
 
@@ -70,6 +75,7 @@ hermes -s doubt-list
 Current verified status:
 - Hermes can inspect Agora skills directly from the repo through `skills.sh` identifiers.
 - Hermes successfully installed `clarify-goals` from `skills-sh/malleus35/agora/...` in a live test.
+- The full v2.3 starter set above has not been re-verified in Hermes in this pass.
 
 That means Hermes users do not need a separate plugin packaging step to start using Agora skills.
 
@@ -88,4 +94,4 @@ For this project, the more important user path is direct install from the repo v
 
 - If `hermes skills search agora` does not show results immediately, use the direct identifier form shown above.
 - If a skill installs but does not load automatically, use `/skill <name>` explicitly.
-- If you want the whole Agora workflow surface, install multiple core skills plus the `dialectic` overlay instead of relying on a single skill.
+- If you want the whole Agora workflow surface, install multiple core skills and start from `agora`.

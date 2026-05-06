@@ -78,10 +78,10 @@ Route to one of:
 - assumption-audit
 - minority-report
 - court-review
-- dialectic overlay
-- skeptic overlay
-- genealogy overlay
-- court overlay
+- dialectic mode
+- skeptic mode
+- genealogy mode
+- court mode
 
 ## Output artifact
 
@@ -110,7 +110,7 @@ Route to one of:
 - ...
 
 ### Recommended Next Step
-- Skill or overlay: ...
+- Skill, mode, or workflow: ...
 - Why: ...
 ```
 
@@ -131,7 +131,7 @@ Common failure modes:
 - listing vague aspirations instead of measurable success criteria
 - flattening multiple decisions into one blob
 - hiding key unknowns because they are inconvenient
-- routing directly to dialectic when simple clarification would suffice
+- routing directly to dialectic mode when simple clarification would suffice
 
 ## Escalation points
 

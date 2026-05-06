@@ -38,6 +38,6 @@
 - The team has not yet identified the primary failure mode.
 
 ### Recommended Next Step
-- Skill or overlay: frame-the-decision
+- Skill, mode, or workflow: frame-the-decision
 - Why: the team must choose which problem to optimize first.
 ```

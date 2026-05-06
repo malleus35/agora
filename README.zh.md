@@ -7,7 +7,7 @@
 Agora 是一个面向监督式 AI 工作的 skill-first overlay。
 它在你已经使用的宿主代理之上增加 clarification、doubt、dissent、synthesis、governance 工作流。
 
-你可以继续使用 Claude Code、Hermes、OpenCode、Codex、OpenClaw 等宿主。Agora 提供可复用的推理命令、可审阅的产物，以及哲学化但实用的 reasoning overlay。
+你可以继续使用 Claude Code、Hermes、OpenCode、Codex、OpenClaw 等宿主。Agora 提供可复用的推理命令、可审阅的产物、workflow registry，以及哲学化但实用的 mode。
 
 ## Quick start
 
@@ -19,7 +19,7 @@ Agora 是一个面向监督式 AI 工作的 skill-first overlay。
 - OpenCode: 先用 native skill tool 加载 `agora`，然后描述问题
 
 如果你想直接进入某个具体流程，也可以直接调用对应 skill 或 command。
-例如：`clarify-goals`、`doubt-list`、`court-review`、`dialectic`
+例如：`clarify-goals`、`cartesian-grill`、`doubt-list`、`court-review`
 
 ## v2 的变化
 
@@ -28,29 +28,41 @@ Agora 不再首先把自己定位为 debate harness。
 - 在行动前澄清真正的决策
 - 保留异议而不是抹平异议
 - 在信任输出之前先写 doubt list
+- 逐个问题 grill 计划，使它达到可验证的清晰度
 - 暴露隐藏假设与继承下来的分类框架
 - 产出适合人工审批的 artifact
 
 哲学不是装饰，而是方法。
-Dialectic、skeptic、genealogy、court review 不是 roleplay，而是实际工作流。
+Dialectic、skeptic、genealogy、court 不是 roleplay，而是决定 skill 执行方式的 mode。
 
-## Core skills 与 overlays
+## Core skills, modes, workflows
 
 ### Core skills
+- agora
 - clarify-goals
+- cartesian-grill
+- prd-from-requirements
+- tdd-subagent-implementation
 - frame-the-decision
 - compare-options
 - doubt-list
 - assumption-audit
 - minority-report
 - decision-memo
+- steelman
+- synthesis-memo
 - court-review
 
-### Overlays
+### Modes
+Modes are not installed as skills. 它们是哲学判断姿态的 enum。
 - dialectic — 战略综合与发散思考
 - skeptic — 验证与风险审查
 - genealogy — 假设与价值批判
 - court — 治理与审批结构
+
+### Workflow registry
+`agora` 使用 workflow registry 将多个 core skill 按顺序连接。
+详见 `docs/workflows.md`。
 
 ## Commands
 
@@ -78,9 +90,10 @@ Dialectic、skeptic、genealogy、court review 不是 roleplay，而是实际工
 hermes skills tap add malleus35/agora
 hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/cartesian-grill --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/decision-memo --category agora --yes
 ```
 安装后，在会话里最简单的入口是：
 ```text
@@ -121,24 +134,28 @@ $agora "你的问题"
 
 ## Current state
 
-Agora v2.2.0 是当前 skill-first overlay 方向的正式版本。
+Agora v2.3.0 是当前 skill-first workflow registry 方向的正式版本。
 当前仓库提供：
 - 可复用的 core skills
-- 明确的 overlays
+- enum-like modes
+- 带有明确 artifact 字段的 workflow registry
 - 低摩擦命令入口
 - 以 artifact 与 supervision 为中心修订过的 agent prompt
 
 ## Registry status
 
 - Hermes / skills.sh：已验证可直接从仓库安装
-- Hermes starter bundle 已验证：agora、clarify-goals、doubt-list、court-review、dialectic
+- Hermes starter bundle 在 v2.3 中以 core skill 为中心：agora、clarify-goals、cartesian-grill、doubt-list、court-review、decision-memo
 - ClawHub / OpenClaw：已验证 Node 22 下 CLI 可运行并可完成认证发布
   - 示例 slug：`agora-clarify-goals`
-  - 当前版本：`2.2.0`
+  - 当前版本：`2.3.0`
 
 ## Documentation
 
 - `docs/philosophy.md`
+- `docs/modes.md`
+- `docs/workflows.md`
+- `docs/PRD-v3.md`
 - `docs/recipes.md`
 - `docs/install-claude-code.md`
 - `docs/install-hermes.md`

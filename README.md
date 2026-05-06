@@ -8,7 +8,7 @@ Agora is a skill-first overlay for supervised AI work.
 It adds clarification, doubt, dissent, synthesis, and governance workflows to the host agent you already use.
 
 You keep Claude Code, Hermes, OpenCode, Codex, OpenClaw, or another host.
-Agora adds reusable reasoning commands, durable judgment artifacts, and philosophical overlays when a problem needs more than raw generation.
+Agora adds reusable reasoning commands, durable judgment artifacts, workflow registry routing, and philosophical modes when a problem needs more than raw generation.
 
 ## Installation quick start
 
@@ -32,9 +32,10 @@ Claude Code uses a plugin flow, OpenClaw can use bundle-plugin packaging, and Co
 hermes skills tap add malleus35/agora
 hermes skills install skills-sh/malleus35/agora/skills/core/agora --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/clarify-goals --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/cartesian-grill --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/doubt-list --category agora --yes
 hermes skills install skills-sh/malleus35/agora/skills/core/court-review --category agora --yes
-hermes skills install skills-sh/malleus35/agora/skills/overlays/dialectic --category agora --yes
+hermes skills install skills-sh/malleus35/agora/skills/core/decision-memo --category agora --yes
 ```
 
 ### OpenCode
@@ -85,7 +86,7 @@ Load the agora skill with the native skill tool, then describe your problem natu
 ```
 
 If you want to use a specific workflow directly, you can still call the underlying skill or command yourself.
-For example: `clarify-goals`, `doubt-list`, `court-review`, or `dialectic`.
+For example: `clarify-goals`, `cartesian-grill`, `doubt-list`, or `court-review`.
 
 ## What changed in v2
 
@@ -94,32 +95,43 @@ It is now an overlay that helps teams:
 - clarify the real decision before acting
 - preserve dissent instead of flattening it
 - write doubt lists before trusting outputs
+- grill plans one question at a time before batch verification
 - surface hidden assumptions and inherited categories
 - produce reviewable artifacts for human approval
 
 Philosophy is methodology, not decoration.
-Dialectic, skepticism, genealogy, and court review are practical workflows, not roleplay.
+Dialectic, skepticism, genealogy, and court review are practical modes, not roleplay.
 
-## Core skills vs overlays
+## Core skills, modes, and workflows
 
 ### Core skills
 Small reusable workflows that can be used independently:
 - agora
 - clarify-goals
+- cartesian-grill
+- prd-from-requirements
+- tdd-subagent-implementation
 - frame-the-decision
 - compare-options
 - doubt-list
 - assumption-audit
 - minority-report
 - decision-memo
+- steelman
+- synthesis-memo
 - court-review
 
-### Overlays
-Opinionated reasoning modes for problems that need a stronger worldview:
+### Modes
+Opinionated reasoning modes for problems that need a stronger worldview.
+Modes are not installed as skills:
 - dialectic — strategic synthesis and ideation
 - skeptic — verification and risk review
 - genealogy — assumption and value critique
 - court — governance and approval structure
+
+### Workflow registry
+`agora` contains a workflow registry that keeps multi-skill flows connected even when host skill chaining is unreliable.
+See `docs/workflows.md`.
 
 ## Commands
 
@@ -147,15 +159,20 @@ Agora exposes small entrypoints so users can get value from one command without 
 /doubt "Review this release plan for hidden failure modes before we ship."
 
 /dialectic "We need synthesis between low-friction adoption and philosophical differentiation."
+
+/agora "Grill this PRD before implementation and tell me what still needs verification."
 ```
 
 ## How `/agora` routes work
 
 - vague problem -> clarify-goals
 - real decision fork -> frame-the-decision + compare-options
-- open-ended ideation -> dialectic overlay
-- verification / risk / pre-release review -> skeptic overlay + doubt-list
-- governance / approval / responsibility separation -> court overlay + court-review
+- plan / design / PRD stress test -> plan-stress-test workflow: clarify-goals + cartesian-grill + doubt-list
+- clear requirements -> prd-from-requirements
+- implementation -> tdd-subagent-implementation
+- open-ended ideation -> dialectic mode + synthesis workflow
+- verification / risk / pre-release review -> skeptic mode + doubt-list
+- governance / approval / responsibility separation -> court mode + court-review
 
 Dialectic remains important, but it is no longer the default for every task.
 
@@ -165,7 +182,9 @@ Agora focuses on durable outputs, not conversation theater.
 
 Common artifacts:
 - clarification briefs
+- grill transcripts
 - doubt lists
+- PRDs
 - decision memos
 - synthesis memos
 - minority reports
@@ -194,25 +213,29 @@ It adds supervised judgment where general-purpose agents are weakest:
 
 ## Current state
 
-Agora v2.2.0 is the current release of the skill-first overlay direction.
+Agora v2.3.0 is the current release of the skill-first workflow registry direction.
 The repo now provides:
 - reusable core skills
-- explicit overlays
+- modes documented as enum-like judgment settings
+- workflow registry entries with required artifacts
 - low-friction commands
 - revised agent prompts oriented around artifacts and supervision
 
 ## Registry status
 
 - Hermes / skills.sh: direct repo-backed skill install has been verified with `hermes skills tap add`, `inspect`, and `install`.
-- Hermes starter bundle verified: `agora`, `clarify-goals`, `doubt-list`, `court-review`, and `dialectic` install cleanly under category `agora`.
+- Hermes starter bundle verified previously. In v2.3, modes are not installed as skills; install core skills such as `agora`, `clarify-goals`, `cartesian-grill`, `doubt-list`, `court-review`, and `decision-memo`.
 - ClawHub / OpenClaw: CLI now runs on Node 22 and authenticated publish has been verified.
   - Published slug: `agora-clarify-goals`
-  - Version: `2.2.0`
+  - Version: `2.3.0`
   - Manual submission remains available for additional entries via `https://clawhub.ai/submit`.
 
 ## Documentation
 
 - `docs/philosophy.md` — philosophy-to-workflow map
+- `docs/modes.md` — mode enum definitions
+- `docs/workflows.md` — workflow registry
+- `docs/PRD-v3.md` — v2.3 product requirements
 - `docs/recipes.md` — scenario-based usage recipes
 - `docs/install-claude-code.md` — Claude Code install guide
 - `docs/install-hermes.md` — Hermes install guide

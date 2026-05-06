@@ -1,23 +1,23 @@
 ---
 name: agora-debate
 description: |
-  Dialectic overlay for ideation, strategic reframing, and synthesis when strong
-  opposing positions need to be worked through explicitly. This is one Agora
-  workflow, not the universal default for every problem.
+  Legacy dialectic workflow for ideation, strategic reframing, and synthesis
+  when strong opposing positions need to be worked through explicitly. This is
+  one Agora workflow, not the universal default for every problem.
 version: 0.2.0
 ---
 
-# Agora Dialectic Overlay
+# Agora Dialectic Workflow
 
 ## Purpose
 
 Use dialectical debate when contradiction is productive.
-This overlay is best for ideation, reframing, and strategic synthesis.
+This workflow is best for ideation, reframing, and strategic synthesis.
 It is not the default path for every request.
 
 ## Best for
 
-Use this overlay when:
+Use this workflow when:
 - the problem is open-ended and multiple strong frames exist
 - two or more credible positions need structured confrontation
 - the team needs a higher-order synthesis rather than a quick choice
@@ -28,8 +28,8 @@ Use this overlay when:
 Prefer other workflows when:
 - the request is mainly vague -> use clarify-goals first
 - the request is a straightforward fork -> use frame-the-decision + compare-options
-- the request is verification or risk review -> use skeptic overlay + doubt-list
-- the request is governance or approval -> use court overlay + court-review
+- the request is verification or risk review -> use skeptic mode + doubt-list
+- the request is governance or approval -> use court mode + court-review
 - the task is simple execution and no philosophical tension is needed
 
 ## Agent dispatch
@@ -43,7 +43,7 @@ Suggested routing:
 - genealogy or category rupture -> Nietzsche
 - verification gate -> Descartes
 
-## Overlay protocol
+## Workflow protocol
 
 ### Phase 1 — Clarify the actual tension
 Before debate, state the question as a real contradiction.
@@ -80,6 +80,6 @@ A dialectic run should end in one of these:
 
 ## Routing reminder
 
-Agora v2 is skill-first.
-Dialectic is one overlay among several.
+Agora v2.3 is skill-first.
+Dialectic is one mode among several.
 Choose it intentionally.

@@ -1,7 +1,8 @@
 # Installing Agora for Codex
 
 Enable Agora in Codex through native skill discovery.
-Because Agora stores skills under `skills/core/` and `skills/overlays/`, installation flattens those skill folders into Codex's global skills directory.
+Because Agora stores callable skills under `skills/core/`, installation flattens those skill folders into Codex's global skills directory.
+Modes are documented in `docs/modes.md` and are not installed as skills.
 
 ## Prerequisites
 
@@ -25,7 +26,7 @@ mkdir -p ~/.agents/skills
 3. Symlink each Agora skill into Codex's global skill discovery path:
 
 ```bash
-for dir in ~/.codex/agora/skills/core/* ~/.codex/agora/skills/overlays/*; do
+for dir in ~/.codex/agora/skills/core/*; do
   name=$(basename "$dir")
   ln -sfn "$dir" "$HOME/.agents/skills/$name"
 done
@@ -48,7 +49,7 @@ If you want a specific workflow directly, call the corresponding skill instead.
 Check that the symlinks exist:
 
 ```bash
-ls -la ~/.agents/skills | grep -E 'clarify-goals|doubt-list|court-review|dialectic'
+ls -la ~/.agents/skills | grep -E 'clarify-goals|cartesian-grill|doubt-list|court-review|decision-memo'
 ```
 
 Then ask Codex to use a specific Agora skill, for example:
@@ -61,9 +62,10 @@ Use the clarify-goals skill to turn this vague product request into a concrete b
 
 The most useful starter set is:
 - `clarify-goals`
+- `cartesian-grill`
 - `doubt-list`
 - `court-review`
-- `dialectic`
+- `decision-memo`
 
 ## Updating
 
@@ -76,7 +78,7 @@ The symlinks continue to point at the updated repo.
 ## Uninstalling
 
 ```bash
-for name in clarify-goals frame-the-decision steelman doubt-list compare-options assumption-audit minority-report synthesis-memo decision-memo court-review dialectic skeptic genealogy court; do
+for name in agora clarify-goals cartesian-grill prd-from-requirements tdd-subagent-implementation frame-the-decision steelman doubt-list compare-options assumption-audit minority-report synthesis-memo decision-memo court-review dialectic skeptic genealogy court; do
   rm -f "$HOME/.agents/skills/$name"
 done
 rm -rf ~/.codex/agora

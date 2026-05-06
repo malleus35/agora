@@ -15,9 +15,11 @@ Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/a
 Codex discovers skills from `~/.agents/skills/`.
 Agora's install flow clones the repo locally and symlinks each skill folder from:
 - `skills/core/`
-- `skills/overlays/`
 
 into Codex's skill discovery directory.
+
+Modes such as `dialectic`, `skeptic`, `genealogy`, and `court` are documented in `docs/modes.md`.
+Modes are not installed as skills.
 
 ## Recommended first use
 
@@ -26,9 +28,10 @@ After installation, the easiest entrypoint is:
 
 If you want to bypass routing and use a workflow directly, call the specific skill instead:
 - `clarify-goals`
+- `cartesian-grill`
 - `doubt-list`
 - `court-review`
-- `dialectic`
+- `decision-memo`
 
 ## Updating
 

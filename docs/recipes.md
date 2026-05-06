@@ -54,7 +54,7 @@ Two strong approaches exist and the team is stuck between them.
 ```
 
 ### Workflow
-1. route into dialectic overlay
+1. route into dialectic mode
 2. force thesis vs antithesis
 3. preserve strengths from both sides
 4. end in either synthesis memo, decision memo, or deadlock report

@@ -25,7 +25,7 @@ Extract:
 2. Separate the goal from any prematurely chosen solution.
 3. Produce a clarification brief.
 4. If the request is still too ambiguous, say what must be answered before proceeding.
-5. Recommend the next Agora skill or overlay.
+5. Recommend the next Agora skill, mode, or workflow.
 
 ## Output artifact
 

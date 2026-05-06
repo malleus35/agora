@@ -15,9 +15,11 @@ Fetch and follow instructions from https://raw.githubusercontent.com/malleus35/a
 OpenCode discovers skills from global and project skill directories.
 Agora's install flow clones the repo locally and symlinks each skill folder from:
 - `skills/core/`
-- `skills/overlays/`
 
 into `~/.config/opencode/skills/`.
+
+Modes such as `dialectic`, `skeptic`, `genealogy`, and `court` are documented in `docs/modes.md`.
+Modes are not installed as skills.
 
 ## Recommended first use
 
@@ -26,9 +28,10 @@ That gives you a common entrypoint and lets Agora route to the right workflow.
 
 If you want to bypass routing and use a workflow directly, load the specific skill instead:
 - `clarify-goals`
+- `cartesian-grill`
 - `doubt-list`
 - `court-review`
-- `dialectic`
+- `decision-memo`
 
 ## Updating
 

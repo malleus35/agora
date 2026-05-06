@@ -73,15 +73,17 @@ Until the ClawHub listing is completed, use Agora with OpenClaw by keeping the r
 
 The most useful local folders are:
 - `skills/core/`
-- `skills/overlays/`
 - `docs/examples/`
 - `docs/philosophy.md`
+- `docs/modes.md`
+- `docs/workflows.md`
 
 Suggested first skills for OpenClaw-style use:
 - `clarify-goals`
+- `cartesian-grill`
 - `doubt-list`
 - `court-review`
-- `dialectic`
+- `decision-memo`
 
 ## What to expect
 
