@@ -23,10 +23,13 @@ assert_not_exists() {
 assert_file "skills/core/cartesian-grill/SKILL.md"
 assert_file "skills/core/prd-from-requirements/SKILL.md"
 assert_file "skills/core/tdd-subagent-implementation/SKILL.md"
+assert_file "skills/agora/SKILL.md"
 assert_file "docs/PRD-v3.md"
 assert_file "docs/workflows.md"
 assert_file "docs/modes.md"
 
+assert_contains "skills/agora/SKILL.md" "single primary public entrypoint"
+assert_contains "skills/agora/SKILL.md" "Workflow registry"
 assert_contains "skills/core/cartesian-grill/SKILL.md" "Ask one question at a time."
 assert_contains "skills/core/cartesian-grill/SKILL.md" "doubt-list is a batch verification artifact"
 assert_contains "skills/core/prd-from-requirements/SKILL.md" "tasks"

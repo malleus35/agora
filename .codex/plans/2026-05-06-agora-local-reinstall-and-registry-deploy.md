@@ -14,6 +14,7 @@
 
 **Files:**
 - Modify: `tests/agora-skill-contracts.sh`
+- Create: `skills/agora/SKILL.md`
 - Test: `tests/agora-skill-contracts.sh`
 
 - [ ] **Step 1: Write the failing test**
@@ -26,6 +27,8 @@ assert_contains "README.md" "skills.sh"
 assert_contains "docs/install-hermes.md" "v2.3.0 local verification"
 assert_contains "docs/README.codex.md" "Only core skills are installed as callable skills."
 assert_contains ".codex/INSTALL.md" "skills/core/*"
+assert_file "skills/agora/SKILL.md"
+assert_contains "skills/agora/SKILL.md" "single primary public entrypoint"
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -108,7 +111,8 @@ Expected: no output and exit 0.
 ### Task 4: Check External Deployment Paths
 
 **Files:**
-- External command output only unless a tracked doc needs status updates.
+- Create or update: `skills/agora/SKILL.md` if the registry expects `skills/<skill>/SKILL.md`
+- External command output unless a tracked doc needs status updates.
 - Test: command help and publish/install attempts
 
 - [ ] **Step 1: Inspect CLI availability**
@@ -130,6 +134,10 @@ Use CLI help and official web documentation where needed to determine the curren
 - [ ] **Step 3: Execute supported non-destructive deploy commands**
 
 Attempt supported publish commands with approval. If a command stops on auth, registry review, missing command, or unsupported distribution surface, record the exact blocker instead of claiming success.
+
+- [ ] **Step 4: Materialize the public registry entrypoint if required**
+
+If Hermes publish creates a PR that adds `skills/agora/SKILL.md`, copy the current `skills/core/agora/SKILL.md` content into that public registry path in this branch and keep `skills/core/agora/SKILL.md` as the canonical development source.
 
 ### Task 5: Final Verification And Push
 
