@@ -4,14 +4,14 @@
     "name": "malleus35"
   },
   "metadata": {
-    "description": "Agora v2.3.0 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, and governance workflows",
-    "version": "2.3.0"
+    "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, governance, and deployment-ready public skill packaging",
+    "version": "2.3.1"
   },
   "plugins": [
     {
       "name": "agora",
-      "description": "Agora v2.3.0 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, and governance workflows",
-      "version": "2.3.0",
+      "description": "Agora v2.3.1 — skill-first workflow registry for supervised AI judgment with clarification, grill, doubt, dissent, synthesis, governance, and deployment-ready public skill packaging",
+      "version": "2.3.1",
       "author": {
         "name": "malleus35"
       },

@@ -134,7 +134,8 @@ $agora "あなたの問題"
 
 ## Current state
 
-Agora v2.3.0 は skill-first workflow registry 方向の現行リリースです。
+Agora v2.3.1 は skill-first workflow registry 方向の現行リリースです。
+v2.3 workflow registry に Claude Code、Codex、skills.sh の配布・状態更新を加えたリリースです。
 このリポジトリは次を提供します。
 - reusable core skills
 - enum-like modes
@@ -145,7 +146,7 @@ Agora v2.3.0 は skill-first workflow registry 方向の現行リリースです
 ## Registry status
 
 - Local reinstall: 2026-05-06 時点で `~/.agents/skills` を `skills/core/*` から再リンクし、旧 callable overlay リンクを削除しました。
-- Claude Code: `malleus35/agora` marketplace の追加と `agora@malleus35-agora` の user scope v2.3.0 update が成功しました。
+- Claude Code: `malleus35/agora` marketplace の追加が成功し、`agora@malleus35-agora` は v2.3.1 metadata release の準備ができています。
 - Codex plugin marketplace: `malleus35/agora` marketplace の追加が成功しました。
 - Hermes / skills.sh: `agora` public package submission PR #2 を作成済みです。skills.sh search index の反映はまだ待機中です。
 - skills.sh CLI: URL-based discovery は `npx skills add https://github.com/malleus35/agora --skill agora --list` で検証済みです。想定 install command は `npx skills add https://github.com/malleus35/agora --skill agora` です。

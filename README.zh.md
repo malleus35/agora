@@ -134,7 +134,8 @@ $agora "你的问题"
 
 ## Current state
 
-Agora v2.3.0 是当前 skill-first workflow registry 方向的正式版本。
+Agora v2.3.1 是当前 skill-first workflow registry 方向的正式版本。
+它包含 v2.3 workflow registry，并补充了 Claude Code、Codex、skills.sh 的发布与状态刷新。
 当前仓库提供：
 - 可复用的 core skills
 - enum-like modes
@@ -145,7 +146,7 @@ Agora v2.3.0 是当前 skill-first workflow registry 方向的正式版本。
 ## Registry status
 
 - Local reinstall：截至 2026-05-06，`~/.agents/skills` 已从 `skills/core/*` 重新链接，旧 callable overlay 链接已移除。
-- Claude Code：`malleus35/agora` marketplace 添加成功，`agora@malleus35-agora` 已以 user scope 更新到 v2.3.0。
+- Claude Code：`malleus35/agora` marketplace 添加成功，`agora@malleus35-agora` 已准备好 v2.3.1 metadata release。
 - Codex plugin marketplace：`malleus35/agora` marketplace 添加成功。
 - Hermes / skills.sh：`agora` public package submission PR #2 已创建；skills.sh 搜索索引仍待刷新。
 - skills.sh CLI：URL-based discovery 已用 `npx skills add https://github.com/malleus35/agora --skill agora --list` 验证；预期安装命令是 `npx skills add https://github.com/malleus35/agora --skill agora`。

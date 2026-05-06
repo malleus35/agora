@@ -212,7 +212,8 @@ It adds supervised judgment where general-purpose agents are weakest:
 
 ## Current state
 
-Agora v2.3.0 is the current release of the skill-first workflow registry direction.
+Agora v2.3.1 is the current release of the skill-first workflow registry direction.
+It includes the v2.3 workflow registry plus the deployment/status refresh for Claude Code, Codex, and skills.sh.
 The repo now provides:
 - reusable core skills
 - modes documented as enum-like judgment settings
@@ -230,7 +231,7 @@ Verified on 2026-05-06:
 
 ## Registry status
 
-- Claude Code: `malleus35/agora` marketplace registration succeeded, and `agora@malleus35-agora` is updated to v2.3.0 at user scope.
+- Claude Code: `malleus35/agora` marketplace registration succeeded, and `agora@malleus35-agora` is ready for the v2.3.1 metadata release.
 - Codex plugin marketplace: `malleus35/agora` marketplace registration succeeded.
 - Hermes / skills.sh: `hermes skills publish skills/core/agora --to github --repo malleus35/agora` created PR #2 for the public `agora` skill package. `hermes skills search agora --source skills-sh` did not show the entry yet, so public search index availability is pending.
 - skills.sh CLI: URL-based discovery is verified with `npx skills add https://github.com/malleus35/agora --skill agora --list`; the expected install form is `npx skills add https://github.com/malleus35/agora --skill agora`.
